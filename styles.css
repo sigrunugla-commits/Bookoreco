@@ -13,14 +13,14 @@ body {
 
 
 h1 {
-  margin-bottom: 172px;
-  margin-top: -469px;
-      color: #718355;
+  top:0;
+  color: #718355;
   position: absolute
   
 }
 
 .buttons {
+  
   display: flex;
   gap: 72px;
 }
@@ -36,6 +36,6 @@ h1 {
   cursor: pointer;
 }
 h2 {
-color: #718355;
+  color: #718355;
 
 }
