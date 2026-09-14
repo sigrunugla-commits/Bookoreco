@@ -1,0 +1,41 @@
+
+
+body {
+  background-color: #e9f5db;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+    
+}
+
+
+h1 {
+  margin-bottom: 172px;
+  margin-top: -469px;
+      color: #718355;
+  position: absolute
+  
+}
+
+.buttons {
+  display: flex;
+  gap: 72px;
+}
+
+.circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: none;
+  background-color: #718355;
+  color:#e9f5db;
+  font-size: 14px;
+  cursor: pointer;
+}
+h2 {
+color: #718355;
+
+}
