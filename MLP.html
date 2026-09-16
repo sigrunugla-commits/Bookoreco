@@ -4,44 +4,72 @@
 <meta charset="UTF-8" />
 <title>My Little Pony book quiz</title>
 <style>
-  
-  h1 {
-  display: flex;
-  flex-direction: column; 
-  align-items: center;
-  color: #718355;
-  font-family: "Bodoni MT";
-  font-size: 40pt;
-  font-weight: 100;  
-}
-  
-    h2 {
-  display: flex;
-  flex-direction: column; 
-  align-items: right;
-  color: #718355;
-  font-family: "Bodoni MT";
-  font-weight: 100;
-  font-size: 25pt;
-  margin-left: 40px;
-  line-height: 0.5;
-}
-  
-    .answers {
-  display: flex;
-  flex-direction: column; 
-  align-items: right;
-  color: #718355;
-  font-family: "Bodoni MT";
-  font-weight: 100;
-  font-size: 20pt;
-  line-height: 0.5;
-}
+
+  *{
+
+    box-sizing: border-box;
+
+  }
+
   body {
     background-color: #e9f5db;
     margin: 0;
     height: 100vh;
   }
+
+  h1 {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    color: #718355;
+    font-family: "Bodoni MT";
+    font-size: 40pt;
+    font-weight: 100;  
+  }
+
+  h2 {
+    display: flex;
+    flex-direction: column; 
+    align-items: right;
+    color: #718355;
+    font-family: "Bodoni MT";
+    font-weight: 100;
+    font-size: 25pt;
+    margin-left: 40px;
+    line-height: 0.5;
+
+    text-align: center;
+  }
+
+  .questionblock, .question, .answers{
+    position: relative;
+    float: left;
+    width: 100%;
+  }
+
+  .answer{
+    position: relative;
+    float: left;
+
+    width: calc(100%/3);
+
+    padding: 5px;
+
+    display:flex;
+    flex-direction: column; 
+    align-items: center;
+
+    color: #718355;
+    font-family: "Bodoni MT";
+    font-weight: 100;
+    font-size: 20pt;
+    line-height: 0.5;
+  }
+
+  .answer img{
+    width: 60%;
+  }
+
   .back-button {
     position: absolute;
     top: 10px;
@@ -53,7 +81,7 @@
     border-radius: 4px;
     cursor: pointer;
   }
-   .list-button {
+  .list-button {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -65,42 +93,107 @@
     cursor: pointer;
   }
   
-  #twilight{
-    left: 200px;
-  }
 </style>
 
 </head>
 <body>
- 
 
-  
-<h1>MY LITTLE PONY</h1> <br><br><br>
-<h2 style="color:#97A97C;"> Question 1</h2>
-<h2>Who is your favorite pony?</h2>
-<div class="answers" id="twilight">Twilight</div>
-<div class="answers" id="rarity">Rarity</div>
-<div class="answers" id="fluttershy">Fluttershy</div>
-<div class="answers" id="pinkie">Pinkie Pie</div>
-<div class="answers" id="rainbow">Rainbow Dash</div>
-<div class="answers" id="AJ">Applejack</div>
-<br><br><br><br><br><br>
-  
-<h2 style="color:#97A97C;"> Question 2</h2>
-<h2>What kind of cutie mark would you have?</h2>
-<div class="answers" id="art">Art</div>
-<div class="answers" id="book">Book</div>
-<div class="answers" id="animal">Animal</div>
-<div class="answers" id="food">Food</div>
-<div class="answers" id="science">Science</div>
-<div class="answers" id="music">Music</div>
-<div class="answers" id="sports">Sports</div>
-<br><br><br><br><br><br>
-
-
-
+<nav>
+  <h1>MY LITTLE PONY</h1> <br><br><br>
   <button class="list-button" onclick="window.location='LISTI.html'">LIST</button>
-
   <button class="back-button" onclick="window.location='index.html'">BACK</button>
+</nav>
+  
+<div class="questionblock">
+  
+  <div class="question">
+    <h2 style="color:#97A97C;"> Question 1</h2>
+    <h2>Who is your favorite pony?</h2>
+  </div>
+  
+  <div class="answers">
+    
+    <div class="answer" id="twilight" data-answer="twilight" data-question="1">
+      <img src="">
+      <div class="value">Twilight</div>
+    </div>
+    
+    <div class="answer" id="rarity" data-answer="rarity" data-question="1">
+      
+      <img src="">
+      <div class="value">Rarity</div>
+    
+    </div>
+    <div class="answer" id="fluttershy" data-answer="fluttershy" data-question="1">
+      <img src="">
+      <div class="value">Fluttershy</div>
+    </div>
+    
+    <div class="answer" id="pinkie" data-answer="pinkie pie" data-question="1">
+      <img src="">
+      <div class="value">Pinkie Pie</div>
+    </div>
+    
+    <div class="answer" id="rainbow" data-answer="rainbow dash" data-question="1">
+      <img src="">
+      <div class="value">Rainbow Dash</div>
+    </div>
+    
+    <div class="answer" id="AJ" data-answer="applejack" data-question="1">
+      <img src="">
+      <div class="value">Applejack</div>
+    </div>
+    
+  </div>
+  
+</div>
+<br><br><br><br><br><br>
+<div class="questionblock">
+  <div class="question">
+    <h2 style="color:#97A97C;"> Question 2</h2>
+    <h2>What kind of cutie mark would you have?</h2>
+  </div>
+  
+  <div class="answers">
+    <div class="answer" id="art" data-answer="art" data-question="2">
+      <img src="">
+      <div class="value">Art</div>
+    </div>
+    
+    <div class="answer" id="book" data-answer="book" data-question="2">
+      <img src="">
+      <div class="value">Book</div>
+    </div>
+    
+    <div class="answer" id="animal" data-answer="animal" data-question="2">
+      <img src="">
+      <div class="value">Animal</div>
+    </div>
+    
+    <div class="answer" id="food"  data-answer="food" data-question="2">
+      <img src="">
+      <div class="value">Food</div>
+    </div>
+    
+    <div class="answer" id="science"  data-answer="sience" data-question="2">
+      <img src="">
+      <div class="value">Science</div>
+    </div>
+    
+    <div class="answer" id="music"  data-answer="music" data-question="2">
+      <img src="">
+      <div class="value">Music</div>
+    </div>
+    
+    <div class="answer" id="sports"  data-answer="sports" data-question="2">
+      <img src="">
+      <div class="value">Sports</div>
+    </div>
+    
+  </div>
+</div>
+  
+<br><br><br><br><br><br>
+  
 </body>
 </html>
