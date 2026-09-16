@@ -1,5 +1,4 @@
 
-
 body {
   background-color: #e9f5db;
   display: flex;
@@ -13,17 +12,30 @@ body {
 
 
 h1 {
-  top:0;
+  top:10px;
   color: #718355;
   position: absolute
-  
 }
 
 .buttons {
-  
+  top: 250px;
+  position: absolute;
   display: flex;
   gap: 72px;
 }
+
+  .list-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 8px 12px;
+  background-color: #718355;
+  color:#e9f5db;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+    
+  }
 
 .circle {
   width: 150px;
@@ -37,5 +49,8 @@ h1 {
 }
 h2 {
   color: #718355;
-
+  margin-top: 400px;
+  font-size: 30pt;
+  font-family: "Bodoni MT";
+  font-weight: 100;
 }
