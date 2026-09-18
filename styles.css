@@ -9,7 +9,22 @@ body {
   margin: 0;
     
 }
+@font-face {
+  font-family: 'Bemirs';
+  src: url('fonts/BEMIRS.ttf') format('truetype'),
+       url('fonts/BEMIRS2.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; 
+}
 
+h1 {
+  top: 10px;
+  font-family: 'Bemirs', sans-serif;
+  font-size: 35px;
+  color: #718355;
+  position: absolute;
+}
 
 h1 {
   top:10px;
