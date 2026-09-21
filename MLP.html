@@ -92,6 +92,32 @@
     cursor: pointer;
   }
   
+  .send-button{
+    
+    padding: 8px 12px;
+    background-color: #718355;
+    color:#e9f5db;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    pointer-events: none;
+    opacity: 0.5;
+    
+  }
+  
+  .selected{
+    
+    color: #718355;
+    text-decoration: underline;
+    
+  }
+  
+  .unselected{
+    
+    color: ;
+    text-decoration: none;
+  }
+  
 </style>
 
 </head>
@@ -112,35 +138,35 @@
   
   <div class="answers">
     
-    <div class="answer" id="twilight" data-answer="twilight" data-question="1">
+    <div class="answer answer1" id="twilight" data-answer="Twilight" data-number="1">
         <img src="photos/twilight.png"  height="140" >
 
       <div class="value">Twilight</div>
 
     </div>
     
-    <div class="answer" id="rarity" data-answer="rarity" data-question="1">
+    <div class="answer answer1" id="rarity" data-answer="Rarity" data-number="1">
       
         <img src="photos/rarity.png"  height="140">
       <div class="value">Rarity</div>
     
     </div>
-    <div class="answer" id="fluttershy" data-answer="fluttershy" data-question="1">
+    <div class="answer answer1" id="fluttershy" data-answer="Fluttershy" data-number="1">
         <img src="photos/fluttershy.png" height="140">
       <div class="value">Fluttershy</div>
     </div>
     
-    <div class="answer" id="pinkie" data-answer="pinkie pie" data-question="1">
+    <div class="answer answer1" id="pinkie" data-answer="Pinkie Pie" data-number="1">
         <img src="photos/pinkie.png" height="140">
       <div class="value">Pinkie Pie</div>
     </div>
     
-    <div class="answer" id="rainbow" data-answer="rainbow dash" data-question="1">
+    <div class="answer answer1" id="rainbow" data-answer="Rainbow Dash" data-number="1">
         <img src="photos/rainbow.png" height="140">
       <div class="value">Rainbow Dash</div>
     </div>
     
-    <div class="answer" id="AJ" data-answer="applejack" data-question="1">
+    <div class="answer answer1" id="AJ" data-answer="Applejack" data-number="1">
         <img src="photos/apple.png" height="140">
       <div class="value">Applejack</div>
     </div>
@@ -151,41 +177,41 @@
   <div class="questionblock">
   <div class="question">
     <h2 style="color:#97A97C;margin-top: 164px"> Question 2</h2>
-    <h2>What kind of cutie mark would you have?</h2>
+    <h2>What kind of Cutiemark would you have?</h2>
   </div>
   
   <div class="answers">
-    <div class="answer" id="art" data-answer="art" data-question="2">
+    <div class="answer answer2" id="art" data-answer="art" data-number="2">
             <img src="photos/artcutie.PNG" height="140">
       <div class="value">Art</div>
     </div>
     
-    <div class="answer" id="book" data-answer="book" data-question="2">
+    <div class="answer answer2" id="book" data-answer="books" data-number="2">
       <img src="photos/bookcutie.PNG" height="140">
       <div class="value">Book</div>
     </div>
     
-    <div class="answer" id="animal" data-answer="animal" data-question="2">
+    <div class="answer answer2" id="animal" data-answer="animal" data-number="2">
       <img src="photos/animalcutie.PNG" height="140">
       <div class="value">Animal</div>
     </div>
     
-    <div class="answer" id="food"  data-answer="food" data-question="2">
+    <div class="answer answer2" id="food"  data-answer="food" data-number="2">
       <img src="photos/foodcutie.PNG" height="140">
       <div class="value">Food</div>
     </div>
     
-    <div class="answer" id="science"  data-answer="sience" data-question="2">
+    <div class="answer answer2" id="science"  data-answer="science" data-number="2">
       <img src="photos/sciencecutie.PNG" height="140">
       <div class="value">Science</div>
     </div>
     
-    <div class="answer" id="music"  data-answer="music" data-question="2">
+    <div class="answer answer2" id="music"  data-answer="music" data-number="2">
       <img src="photos/musiccutie%20(1).PNG" height="140">
       <div class="value">Music</div>
     </div>
     
-    <div class="answer" id="sports"  data-answer="sports" data-question="2">
+    <div class="answer answer2" id="sports"  data-answer="sports" data-number="2">
       <img src="photos/sportscutie.PNG" height="140">
       <div class="value">Sports</div>
     </div>
@@ -193,7 +219,534 @@
   </div>
 </div>
   
+  <button class="send-button">SEND</button>
+  
+  
+    <div class="Book">
+        
+        <img src="" style="width: 200px">
+        <div class="booktitle"></div>
+        <div class="bookauthor"></div>
+        <div class="bookdescription"></div>
+        
+          
+    </div>
+  
 <br><br><br><br><br><br>
+  
   
 </body>
 </html>
+
+<script>
+
+  
+    var unselected = '#97A97C';
+    var selected = '#718355';
+  
+    var generaljson = {
+  "pony": [
+    {
+      "Pony": "Twilight",
+      "Cutiemark": "art",
+      "": "",
+      "Book": "A forgery of roses",
+      "Author": "Jessica S. Olson",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1624639782i/51941042.jpg",
+      "Description": "Myra Whitlock has a gift. One many would kill for.\nShe’s an artist whose portraits alter people’s real-life bodies, a talent she must hide from those who would kidnap, blackmail, and worse in order to control it. Guarding that secret is the only way to keep her younger sister safe now that their parents are gone.\nBut one frigid night, the governor’s wife discovers the truth and threatens to expose Myra if she does not complete a special portrait that would resurrect the governor's dead son. Desperate, Myra ventures to his legendary stone mansion.\nOnce she arrives, however, it becomes clear the boy’s death was no accident. Someone dangerous lurks within these glittering halls. Someone harboring a disturbing obsession with portrait magic.\nMyra cannot do the painting until she knows what really happened, so she turns to the governor’s older son, a captivating redheaded poet. Together, they delve into the family’s most shadowed affairs, racing to uncover the truth before the secret Myra spent her life concealing makes her the killer’s next victim."
+    },
+    {
+      "Pony": "Twilight",
+      "Cutiemark": "books",
+      "": "",
+      "Book": "The Wednesday Witches Book Club",
+      "Author": "Sarah Beth Durst",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1782679605i/254706851.jpg",
+      "Description": "After a challenging divorce, Ashley joins a witchy book club in search of a new social life. But when members start being transformed one by one, Ashley and the remaining book club members must uncover the culprit behind these sinister spells. With time running out until she’s the next target, she turns to her grimoire for answers. Because what better way to catch a magical culprit than through stories?"
+    },
+    {
+      "Pony": "Twilight",
+      "Cutiemark": "animal",
+      "": "",
+      "Book": "A Witch's Guide to Magical Innkeeping",
+      "Author": "Sangu Madana",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1688419472i/123029113.jpg",
+      "Description": "Sera Swan was once one of the most powerful witches in Britain. Then she resurrected her great-aunt Jasmine from the (very recently) dead, lost most of her magic, befriended a semi-villainous talking fox, and was exiled from her magical Guild. Now she (slightly reluctantly and just a bit grumpily) helps Aunt Jasmine run an inn in Lancashire, where she deals with her quirky guests' shenanigans, tries to keep the talking fox in check, and longs for the magical future she lost.\nWhen she learns about an old spellbook that holds the secret to restoring her power, she turns to Luke Larsen, a gorgeous historian who might just be able to help her unlock the book’s mysteries. Luke, who has his own reasons for staying at the inn, never planned on getting involved in the madcap goings-on around him and certainly had no intention of letting certain grumpy innkeepers past his icy walls, so no one is more surprised than he is when he not only agrees to help, but also finds himself thawing .\nRunning an inn, reclaiming lost magic, and staying one step ahead of the watchful Guild is a lot for anyone, but Sera is about to discover that she doesn’t have to do it alone... and that the weird, wonderful family she’s made might be the best magic of all."
+    },
+    {
+      "Pony": "Twilight",
+      "Cutiemark": "food",
+      "": "",
+      "Book": "The Honey Witch",
+      "Author": "Sydney J. Shields",
+      "Link": "https://cdn.waterstones.com/bookjackets/large/9780/3565/9780356522548.jpg",
+      "Description": "Twenty-one-year-old Marigold Claude has always preferred the company of the spirits of the meadow to any of the suitors who’ve tried to woo her. So when her grandmother whisks her away to the family cottage on the tiny Isle of Innisfree with an offer to train her as the next Honey Witch, she accepts immediately. But her newfound magic and independence come with a price: No one can fall in love with the Honey Witch.\nWhen Lottie Burke, a notoriously grumpy skeptic who doesn’t believe in magic, shows up on her doorstep, Marigold can’t resist the challenge to prove to her that magic is real. But soon, Marigold begins to care for Lottie in ways she never expected. And when darker magic awakens and threatens to destroy her home, she must fight for much more than her new home—at the risk of losing her magic and her heart."
+    },
+    {
+      "Pony": "Twilight",
+      "Cutiemark": "sports",
+      "": "",
+      "Book": "The Queens Gambit",
+      "Author": "Walter Tevis",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1388265750i/62022.jpg",
+      "Description": "When she is sent to an orphanage at the age of eight, Beth Harmon soon discovers two ways to escape her surroundings, albeit fleetingly: playing chess and taking the little green pills given to her and the other children to keep them subdued. Before long, it becomes apparent that hers is a prodigious talent, and as she progresses to the top of the US chess rankings she is able to forge a new life for herself. But she can never quite overcome her urge to self-destruct. For Beth, there’s more at stake than merely winning and losing."
+    },
+    {
+      "Pony": "Twilight",
+      "Cutiemark": "science",
+      "": "",
+      "Book": "The Humans",
+      "Author": "Matt Haig",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1353739654i/16130537.jpg",
+      "Description": "When an extraterrestrial visitor arrives on Earth, his first impressions of the human species are less than positive. Taking the form of Professor Andrew Martin, a leading mathematician at Cambridge University, the visitor wants to complete his task and return home to his planet and a utopian society of immortality and infinite knowledge.\nHe is disgusted by the way humans look, what they eat, and the wars they witness on the news, and is totally baffled by concepts such as love and family. But as time goes on, he starts to realize there may be more to this weird species than he has been led to believe. He drinks wine, reads Emily Dickinson, listens to Talking Heads, and begins to bond with the family he lives with, in disguise. In picking up the pieces of the professor's shattered personal life, the narrator sees hope and redemption in the humans' imperfections and begins to question the very mission that brought him there--a mission that involves not only thwarting human progress...but murder."
+    },
+    {
+      "Pony": "Twilight",
+      "Cutiemark": "music",
+      "": "",
+      "Book": "Sing Me Forgotten",
+      "Author": "Jessica S. Olson",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1592551209i/53176389.jpg",
+      "Description": "Isda does not exist. At least not beyond the opulent walls of the opera house.\nCast into a well at birth for being one of the magical few who can manipulate memories when people sing, she was saved by Cyril, the opera house's owner. Since that day, he has given her sanctuary from the murderous world outside. All he asks in return is that she use her power to keep ticket sales high–and that she stay out of sight. For if anyone discovers she survived, Isda and Cyril would pay with their lives.\nBut Isda breaks Cyril's cardinal rule when she meets Emeric Rodin, a charming boy who throws her quiet, solitary life out of balance. His voice is unlike any she's ever heard, but the real shock comes when she finds in his memories hints of a way to finally break free of her gilded prison.\nHaunted by this possibility, Isda spends more and more time with Emeric, searching for answers in his music and his past. But the price of freedom is steeper than Isda could ever know. For even as she struggles with her growing feelings for Emeric, she learns that in order to take charge of her own destiny, she must become the monster the world tried to drown in the first place."
+    },
+    {
+      "Pony": "Rarity",
+      "Cutiemark": "art",
+      "": "",
+      "Book": "Tempests & Tea Leaves",
+      "Author": "Rachel Morgan",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1744230835i/228005906.jpg",
+      "Description": "Step 1: Secure an advantageous match.\nStep 2: Save your family from financial ruin.\nStep 3: Definitely don’t antagonize the most powerful fae lord in the land.\nIris Starspun has failed spectacularly at all three, and the Bloom Season has barely begun.\nBorn half-human, half-fae, and scandalously magicless, Iris has long accepted her place at the bottom of glittering fae society.\nBut when her magical gift finally manifests—a frivolous knack for folding paper into enchanted shapes—her parents are determined she use it to snare a wealthy husband and save her family from ruin. Iris, however, would sooner fold herself into a paper bird and fly far away.\nEnter Lord Brooding.\nAhem, that is, Lord Jasvian Rowanwood.\nHeir to the Isles' most powerful fae family, and the very definition of insufferably serious, he has no patience for sharp-tongued debutantes with parlor-trick magic.\nUnfortunately for him, his formidable grandmother does.\nWhen Iris is chosen as apprentice at the prestigious Charmed Leaf Tea House, she and Jasvian are forced into dangerously close quarters. Sparks fly, tempers flare—and Iris soon finds herself alarmingly close to enjoying their heated interactions.\nBut the opinionated Lord Rowanwood would never fall for someone with a diluted bloodline and magic as useless as hers.\nWould he?"
+    },
+    {
+      "Pony": "Rarity",
+      "Cutiemark": "books",
+      "": "",
+      "Book": "Half a soul",
+      "Author": "Olivia Atwater",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1648605334i/60717747.jpg",
+      "Description": "Ever since she was cursed by a faerie, Theodora Ettings has had no sense of fear or embarrassment - a condition which makes her prone to accidental scandal. Dora hopes to be a quiet, sensible wallflower during the London Season - but when the strange, handsome and utterly uncouth Lord Sorcier discovers her condition, she is instead drawn into dangerous and peculiar faerie affairs.\nIf Dora's reputation can survive both her curse and her sudden connection with the least-liked man in all of high society, then she may yet reclaim her normal place in the world. . . but the longer Dora spends with Elias Wilder, the more she begins to suspect that one may indeed fall in love, even with only half a soul.\n"
+    },
+    {
+      "Pony": "Rarity",
+      "Cutiemark": "animal",
+      "": "",
+      "Book": "The Unicorn Hunters",
+      "Author": "Katherine Arden\n",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1761163138i/241125269.jpg",
+      "Description": "Anne of Brittany was a child when France invaded and drove her royal father to his death. Now she is a young woman, sovereign duchess of an occupied realm, and France means to crown their conquest by marrying her to their king. Such an alliance would put her title, her lands, and her body forever in the hands of her enemies.\nBut Anne refuses to be the last duchess of Brittany.\nHer only hope of resisting conquest is another alliance sealed with marriage, so Anne arranges a daring last gambit: a secret betrothal to Charles of France’s greatest rival. But secrets are hard to keep in a world where rival courts spy on each other with diviners.\nThe forest of Brocéliande was once the haunt of Merlin the Enchanter and the long-lost faerie queen. But magic is long gone from Broceliande, except for the occasional sight of a unicorn and one critical quirk: This ancient forest is completely hostile to divination.\nWhile pretending compliance with France, Anne plans a unicorn hunt in Brocéliande. A bit of pointless pageantry. A diversion so she can wed in secret.\nOr so she thinks."
+    },
+    {
+      "Pony": "Rarity",
+      "Cutiemark": "food",
+      "": "",
+      "Book": "Recipe for a Charmed Life",
+      "Author": "Rachel Linden\n",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1685352608i/71872867.jpg",
+      "Description": "American chef Georgia May Jackson has one goal—to run her own restaurant in Paris. After a grueling decade working in Parisian kitchens, she is on the cusp of success. But in one disastrous night, Georgia loses her sous-chef position, her French boyfriend, and her sense of taste! Renowned for her refined palate and daring use of bold flavors to create remarkable dishes, Georgia is devastated to discover her culinary gift has simply...vanished.\nWhen she receives a surprising invitation from her estranged mother, Georgia flees to a small island near Seattle hoping the visit will help her regain her spark in the kitchen. There she tentatively reconnects with her mom, a free-spirited hippie eager to make up for her past mistakes. But there’s something about the enigmatic island Georgia just can’t piece together. Good luck charms keep appearing in the oddest places. Her neighbor is a puzzlingly antagonist (and annoyingly handsome) oyster farmer. And her mom keeps hinting at a mysterious family legacy.\nWith the clock ticking and time running out to win her dream job in Paris, Georgia begins to unravel some astonishing secrets that make her wonder if the true recipe for a charmed life might look—and taste—very different than she ever imagined."
+    },
+    {
+      "Pony": "Rarity",
+      "Cutiemark": "sports",
+      "": "?",
+      "Book": "The Wisteria Society of Lady Scoundrels",
+      "Author": "India Holton",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1606749077i/55502861.jpg",
+      "Description": "Cecilia Bassingwaite is the ideal Victorian lady. She's also a thief. Like the other members of the Wisteria Society crime sorority, she flies around England drinking tea, blackmailing friends, and acquiring treasure by interesting means. Sure, she has a dark and traumatic past and an overbearing aunt, but all things considered, it's a pleasant existence. Until the men show up.\nNed Lightbourne is a sometimes assassin who is smitten with Cecilia from the moment they meet. Unfortunately, that happens to be while he's under direct orders to kill her. His employer, Captain Morvath, who possesses a gothic abbey bristling with cannons and an unbridled hate for the world, intends to rid England of all its presumptuous women, starting with the Wisteria Society. Ned has plans of his own. But both men have made one grave mistake. Never underestimate a woman.\nWhen Morvath imperils the Wisteria Society, Cecilia is forced to team up with her handsome would-be assassin to save the women who raised her--hopefully proving, once and for all, that she's as much of a scoundrel as the rest of them."
+    },
+    {
+      "Pony": "Rarity",
+      "Cutiemark": "science",
+      "": "",
+      "Book": "The Clockwork Girl",
+      "Author": "Anna Mazzola",
+      "Link": "https://m.media-amazon.com/images/I/91C30CzimfL.jpg",
+      "Description": "Paris, 1750. In the midst of winter, as birds fall frozen from the sky, a new maid arrives at the home of a celebrated clockmaker and his clever, unworldly daughter. But rumours are stirring that Reinhart's uncanny mechanical creations - bejewelled birds, silver spiders - are more than mere automata. That they might defy the laws of nature, perhaps even at the expense of the living...\nBut Madeleine is hiding a dark past, and a dangerous purpose - to discover the truth of the clockmaker's experiments and record his every move, in exchange for her own chance of freedom.\nMeanwhile, in the streets, children are quietly disappearing - and Madeleine comes to fear that she has stumbled upon a greater conspiracy. One which might reach to the heart of Versailles..."
+    },
+    {
+      "Pony": "Rarity",
+      "Cutiemark": "music",
+      "": "",
+      "Book": "Love & Letter Charms",
+      "Author": "Rachel Morgan\n",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1761137562i/240667953.jpg",
+      "Description": "When shy Aurelise Rowanwood finds herself among the chosen few—young fae ladies from whom the charming (and far too flirtatious) Prince Ryden must select his bride this Bloom Season—she resolves to remain in the background, drawing as little attention as possible until she can quietly depart the palace. After all, she’s never liked the prince and she has far more practical plans of finding a safe, steady companion and retreating to a quiet life with her beloved music.\nBut when Ryden discovers the truth—that Lady Aurelise is the very same captivating young woman he’s been secretly corresponding with through enchanted letters for the past year—he’s determined to breach her carefully built walls and win her heart in both ink and reality. His weapon of choice? A scandalously irresistible The Dare List.\nCaught between the comfort of her quiet dreams and the intensity of feelings she has spent her life avoiding, Aurelise is terrified of surrendering her heart—yet finds herself falling for both the mysterious writer of her letters and the unsuitable, infuriatingly flirtatious prince.\n"
+    },
+    {
+      "Pony": "Fluttershy",
+      "Cutiemark": "art",
+      "": "",
+      "Book": "Tell the Wolves I'm Home",
+      "Author": "Carol Rifka Brunt",
+      "Link": "https://m.media-amazon.com/images/I/81W8F1dJBqL.jpg",
+      "Description": "1987. There's only one person who has ever truly understood fourteen-year-old June Elbus, and that's her uncle, the renowned painter Finn Weiss. Shy at school and distant from her older sister, June can only be herself in Finn's company; he is her godfather, confidant, and best friend. So when he dies, far too young, of a mysterious illness her mother can barely speak about, June's world is turned upside down. But Finn's death brings a surprise acquaintance into June's life—someone who will help her to heal, and to question what she thinks she knows about Finn, her family, and even her own heart.\nAt Finn's funeral, June notices a strange man lingering just beyond the crowd. A few days later, she receives a package in the mail. Inside is a beautiful teapot she recognizes from Finn's apartment, and a note from Toby, the stranger, asking for an opportunity to meet. As the two begin to spend time together, June realizes she's not the only one who misses Finn, and if she can bring herself to trust this unexpected friend, he just might be the one she needs the most."
+    },
+    {
+      "Pony": "Fluttershy",
+      "Cutiemark": "books",
+      "": "",
+      "Book": "The Spellshop",
+      "Author": "Sarah Beth Durst",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1743896214i/195138130.jpg",
+      "Description": "Kiela has always had trouble dealing with people. Thankfully, as a librarian at the Great Library of Alyssium, she and her assistant, Caz—a magically sentient spider plant—have spent the last decade sequestered among the empire’s most precious spellbooks, preserving their magic for the city’s elite.\nWhen a revolution begins and the library goes up in flames, she and Caz flee with all the spellbooks they can carry and head to a remote island Kiela never thought she’d see again: her childhood home. Taking refuge there, Kiela discovers, much to her dismay, a nosy—and very handsome—neighbor who can’t take a hint and keeps showing up day after day to make sure she’s fed and to help fix up her new home.\nIn need of income, Kiela identifies something that even the bakery in town doesn’t have: jam. With the help of an old recipe book her parents left her and a bit of illegal magic, her cottage garden is soon covered in ripe berries.\nBut magic can do more than make life a little sweeter, so Kiela risks the consequences of using unsanctioned spells and opens the island’s first-ever and much needed secret spellshop."
+    },
+    {
+      "Pony": "Fluttershy",
+      "Cutiemark": "animal",
+      "": "",
+      "Book": "Agnes Aubert's Mystical Cat Shelter",
+      "Author": "Heather Fawcett",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1754967375i/234352814.jpg",
+      "Description": "Agnes Aubert leads a meticulously organized life—and she likes it that way. As the proudly type-A manager of a much-needed cat rescue charity, she has devoted her life to finding forever homes for lost cats.\nBut after she is forced to move the cat shelter, Agnes learns that her new landlord is using her charity as a front—for an internationally renowned and thoroughly disreputable magic shop. Owned by the disorganized—not to mention self-absorbed, irritating, but also decidedly handsome—Havelock Renard, magician and failed Dark Lord, the shop draws magical clientele from around the world, partly due to the quality of Havelock’s illicit goods as well as their curiosity about his shadowy past and rumors of his incredible powers. Agnes's charity offers the perfect cover for illegal magics.\nAgnes couldn’t care less about the shop—magical intrigue or not, there are cats to be rescued. But when an enemy from Havelock’s past surfaces, the magic shop—and more importantly, the cat shelter—are suddenly in jeopardy. To save the shelter, will Agnes have to set aside her social conscience and protect the man who once tried to bring about the apocalypse—and is now trying to steal her heart?"
+    },
+    {
+      "Pony": "Fluttershy",
+      "Cutiemark": "food",
+      "": "",
+      "Book": "The Teller of Small Fortunes",
+      "Author": "Julie Leong",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1710771695i/207611551.jpg",
+      "Description": "Tao is an immigrant fortune teller, traveling between villages with just her trusty mule for company. She only tells \"\"small\"\" fortunes: whether it will hail next week; which boy the barmaid will kiss; when the cow will calve. She knows from bitter experience that big fortunes come with big consequences…\nEven if it’s a lonely life, it’s better than the one she left behind. But a small fortune unexpectedly becomes something more when a (semi) reformed thief and an ex-mercenary recruit her into their desperate search for a lost child. Soon, they’re joined by a baker with a knead for adventure, and—of course—a slightly magical cat.\nTao sets down a new path with companions as big-hearted as her fortunes are small. But as she lowers her walls, the shadows of her past are closing in—and she’ll have to decide whether to risk everything to preserve the family she never thought she could have."
+    },
+    {
+      "Pony": "Fluttershy",
+      "Cutiemark": "sports",
+      "": "",
+      "Book": "Beartown",
+      "Author": "Fredrick Backman",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1525349525i/31443394.jpg",
+      "Description": "People say Beartown is finished. A tiny community nestled deep in the forest, it is slowly losing ground to the ever-encroaching trees. But down by the lake stands an old ice rink, built generations ago by the working men who founded town. And that rink is the reason people in Beartown believe tomorrow will be better than today. Their junior hockey team is about to compete in the national championships, and they actually have a shot at winning. All the hopes and dreams of the town now rest on the shoulders of a handful of teenage boys.\nA victory would send star player Kevin onto a brilliant professional future in the NHL. It would mean everything to Amat, a scrawny fifteen-year-old treated like an outcast everywhere but on the ice. And it would justify the choice that Peter, the team's general manager, and his wife, Kira, made to return to his hometown and raise their children in this beautiful but isolated place.\nBeing responsible for the hopes of an entire town is a heavy burden, and the semifinal match is the catalyst for a violent act that leaves a young girl traumatized and a town in turmoil. Hers is a story no one wants to believe since the truth would mean the end of the dream. Accusations are made, and like ripples on a pond, they travel through all of Beartown, leaving no resident unaffected."
+    },
+    {
+      "Pony": "Fluttershy",
+      "Cutiemark": "science",
+      "": "",
+      "Book": "A Psalm for the Wild-Built",
+      "Author": "Becky Chambers",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1600789291i/40864002.jpg",
+      "Description": "Centuries before, robots of Panga gained self-awareness, laid down their tools, wandered, en masse into the wilderness, never to be seen again. They faded into myth and urban legend.\nNow the life of the tea monk who tells this story is upended by the arrival of a robot, there to honor the old promise of checking in. The robot cannot go back until the question of \"\"what do people need?\"\" is answered. But the answer to that question depends on who you ask, and how. They will need to ask it a lot. Chambers' series asks: in a world where people have what they want, does having more matter?"
+    },
+    {
+      "Pony": "Fluttershy",
+      "Cutiemark": "music",
+      "": "",
+      "Book": "Sea of Charms",
+      "Author": "Sarah Beth Durst",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1788205040i/240019706.jpg",
+      "Description": "Marin is a supply runner with her own boat that she sails from island to island, delivering whatever anyone will pay her to deliver: letters, flour, even the occasional enchanted lemur. It’s a lonely life, but it’s hers, and she wouldn’t trade the freedom of the sea for anything. Her only companion is a sea serpent, Perri, whom she saved from a fisherfolk’s net.\nOne day, she sails to Alyssium and discovers the city is on fire. There’s been a revolution, and the empire has fallen. Marin, with Perri, begins transporting refugees, finding them new homes where they can start over. One such refugee is Dax, a composer who refuses to leave behind his instruments, no matter how much she tries to emphasize the gravity of the situation. Intrigued by his stubbornness, his passion for stories, and his charming smile, Marin discovers perhaps she isn’t saving him ― maybe it’s the other way around."
+    },
+    {
+      "Pony": "Pinkie Pie",
+      "Cutiemark": "art",
+      "": "",
+      "Book": "I'll Give You the Sun",
+      "Author": "Jandy Nelson",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1608612077i/20820994.jpg",
+      "Description": "At first, Jude and her twin brother Noah, are inseparable. Noah draws constantly and is falling in love with the charismatic boy next door, while daredevil Jude wears red-red lipstick, cliff-dives, and does all the talking for both of them.\nYears later, they are barely speaking. Something has happened to change the twins in different yet equally devastating ways... but then Jude meets an intriguing, irresistible boy and a mysterious new mentor. The early years are Noah's to tell; the later years are Jude's. But they each have only half the story, and if they can only find their way back to one another, they'll have a chance to remake their world."
+    },
+    {
+      "Pony": "Pinkie Pie",
+      "Cutiemark": "books",
+      "": "",
+      "Book": "The Library of Memories",
+      "Author": "Barbara Perez Marquez, Lissy Marlin",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1764841277i/244671620.jpg",
+      "Description": "Copenhagen arrived at the library one day with little memory of who she is, and she's been stuck here ever since. She takes to helping preserve the library alongside the wise mechanical creatures who tend to its care, but the longer she stays, the more she forgets. Unless she can find her memories, Copenhagen will cease to remember everything that makes her who she is.\nBut the library has been losing magic for quite some time, and with it, all the memories it holds. To save this wondrous place from ruin, Copenhagen will have to journey deeper into the library than she's ever ventured before, even if what she finds shatters everything she thought she knew."
+    },
+    {
+      "Pony": "Pinkie Pie",
+      "Cutiemark": "animal",
+      "": "",
+      "Book": "The Baby Dragon Café",
+      "Author": "Aamna Quereshi",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1752621917i/238870004.jpg",
+      "Description": "When Saphira opens her cafe welcoming pet baby dragons, she isn’t expecting it to be quite so hard to keep the fires burning. But her young dragon patrons keep incinerating her furniture, which means selling coffee isn’t covering all her costs.\nLocal heart-throb Aiden is a gardener, though his disobedient baby dragon is a major distraction from his beloved plants. However, Saphira’s café gives him an idea – he’ll ask Saphira to train his dragon, and pay her enough to keep the cafe afloat.\nThey know they’re the answer to each other’s problems, but happy-go-lucky Saphira and gorgeous-but-grumpy Aiden couldn’t be more different. Can they find a way to work together – and maybe even ignite some fire of their own?"
+    },
+    {
+      "Pony": "Pinkie Pie",
+      "Cutiemark": "food",
+      "": "",
+      "Book": "Uncharmed",
+      "Author": "Lucy Jane Wood",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1745592288i/222925957.jpg",
+      "Description": "Perfection is a spell. It’s time to break it.\nAndromeda Wildwood is practically perfect in every witch way. As the proud owner of Celestial Bakehouse, a bustling London bakery, Annie’s life is a haze of pink, magic and impossibly high standards. Annie devotes her powers to pleasing others, believing that perfection is a price worth paying, no matter the magical toll it takes.\nBut Annie’s charmed existence is about to get delightfully messy . . .\nAnnie is tasked by her coven with mentoring a troubled teenage witch, and she couldn’t be more different from fiery, stubborn Maeve. Or from Hal, the gruff but handsome owner of their temporary lodgings, who is not best pleased to find the coven has offered up his woodland cottage to two headstrong witches.\nAs the unlikely trio slowly bond, outside forces begin to take an interest in Maeve’s extraordinary powers. Will Annie risk everything to protect the true magic she’s finally found?"
+    },
+    {
+      "Pony": "Pinkie Pie",
+      "Cutiemark": "sports",
+      "": "",
+      "Book": "The Third Period Comeback",
+      "Author": "E.K. Johnston",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1763035991i/243856595.jpg",
+      "Description": "Hayley Rilko loves hockey, but since her last name is Rilko, everyone in Canada knows she’s a carrier of the most notorious curse in sports history. It's common knowledge that as soon as she gets her third period, her hockey career will be over. If she so much as sets foot on a rink, people will die—unless she and her cousins can find and burn the corpse of their cursed great grandfather, lost somewhere in the northern swamps. But first they'll have to have a serious conversation with his ghost and distract their grandparents."
+    },
+    {
+      "Pony": "Pinkie Pie",
+      "Cutiemark": "science",
+      "": "",
+      "Book": "The Cybernetic Tea Shop",
+      "Author": "Meredith Katz",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1455127529i/28421799.jpg",
+      "Description": "Clara Gutierrez is a highly-skilled technician specializing in the popular 'Raise' AI companions. Her childhood in a migrant worker family has left her uncomfortable with lingering in any one place, so she sticks around just long enough to replenish her funds before she moves on, her only constant companion Joanie, a fierce, energetic Raise hummingbird.\nSal is a fully autonomous robot, the creation of which was declared illegal ages earlier due to ethical concerns. She is older than the law, however, at best out of place in society and at worst hated. Her old master is long dead, but she continues to run the tea shop her master had owned, lost in memories of the past, slowly breaking down, and aiming to fulfill her master's dream for the shop.\nWhen Clara stops by Sal's shop for lunch, she doesn't expect to find a real robot there, let alone one who might need her help. But as they begin to spend time together and learn more about each other, they both start to wrestle with the concept of moving on..."
+    },
+    {
+      "Pony": "Pinkie Pie",
+      "Cutiemark": "music",
+      "": "",
+      "Book": "I Was Born for This",
+      "Author": "Alice Oseman",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1517511429i/34325090.jpg",
+      "Description": "For Angel Rahimi, life is only about one thing: The Ark – a pop-rock trio of teenage boys who are currently taking the world by storm. Being part of The Ark’s fandom has given her everything – her friendships, her dreams, her place in the world.\nJimmy Kaga-Ricci owes everything to The Ark too. He’s their frontman – and playing in a band is all he’s ever dreamed of doing. It’s just a shame that recently everything in his life seems to have turned into a bit of a nightmare.\nBecause that’s the problem with dreaming – eventually, inevitably, real life arrives with a wake-up call. And when Angel and Jimmy are unexpectedly thrust together, they will discover just how strange and surprising facing up to reality can be."
+    },
+    {
+      "Pony": "Rainbow Dash",
+      "Cutiemark": "art",
+      "": "",
+      "Book": "don´t let the forest in",
+      "Author": "c.g. drews",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1699124610i/200982373.jpg",
+      "Description": "Once upon a time, Andrew had cut out his heart and given it to this boy, and he was very sure Thomas had no idea that Andrew would do anything for him. Protect him. Lie for him.\nKill for him.\nHigh school senior Andrew Perrault finds refuge in the twisted fairytales that he writes for the only person who can ground him to reality―Thomas Rye, the boy with perpetually ink-stained hands and hair like autumn leaves. And with his twin sister, Dove, inexplicably keeping him at a cold distance upon their return to Wickwood Academy, Andrew finds himself leaning on his friend even more.\nBut something strange is going on with Thomas. His abusive parents have mysteriously vanished, and he arrives at school with blood on his sleeve. Thomas won't say a word about it, and shuts down whenever Andrew tries to ask him questions. Stranger still, Thomas is haunted by something, and he seems to have lost interest in his artwork―whimsically macabre sketches of the monsters from Andrew's wicked stories.\nDesperate to figure out what's wrong with his friend, Andrew follows Thomas into the off-limits forest one night and catches him fighting a nightmarish monster―Thomas's drawings have come to life and are killing anyone close to him. To make sure no one else dies, the boys battle the monsters every night. But as their obsession with each other grows stronger, so do the monsters, and Andrew begins to fear that the only way to stop the creatures might be to destroy their creator..."
+    },
+    {
+      "Pony": "Rainbow Dash",
+      "Cutiemark": "books",
+      "": "",
+      "Book": "A Dragon Rider's Guide to Retirement",
+      "Author": "Julia Huni, Lia Huni",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1753104059i/237575117.jpg",
+      "Description": "When dragon rider William Ordell is grounded by a battlefield injury, he trades conflict for peace and purchases an abandoned lighthouse on the island of Safe Haven. But quiet doesn’t suit a man used to action. After a series of mysterious fires, William finds himself launching the island’s first fire brigade—with help from the local sea dragons.\nCalantha Stormbringer has left war behind, along with the last sparks of her fading magic. She retreats to Safe Haven to rebuild her late aunt’s dusty bookshop—and maybe herself. Restoring the shop will require patience, intelligence, and gold. Calantha figures two out of three isn’t bad.\nWhat neither of them wants? To run into each other. Again."
+    },
+    {
+      "Pony": "Rainbow Dash",
+      "Cutiemark": "animal",
+      "": "",
+      "Book": "A Dragon Rider's Guide to Retirement",
+      "Author": "Julia Huni, Lia Huni",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1753104059i/237575117.jpg",
+      "Description": "When dragon rider William Ordell is grounded by a battlefield injury, he trades conflict for peace and purchases an abandoned lighthouse on the island of Safe Haven. But quiet doesn’t suit a man used to action. After a series of mysterious fires, William finds himself launching the island’s first fire brigade—with help from the local sea dragons.\nCalantha Stormbringer has left war behind, along with the last sparks of her fading magic. She retreats to Safe Haven to rebuild her late aunt’s dusty bookshop—and maybe herself. Restoring the shop will require patience, intelligence, and gold. Calantha figures two out of three isn’t bad.\nWhat neither of them wants? To run into each other. Again."
+    },
+    {
+      "Pony": "Rainbow Dash",
+      "Cutiemark": "food",
+      "": "",
+      "Book": "Legends & Lattes",
+      "Author": "Travis Baldree",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1654581271i/61242426.jpg",
+      "Description": "After a lifetime of bounties and bloodshed, Viv is hanging up her sword for the last time.\nThe battle-weary orc aims to start fresh, opening the first ever coffee shop in the city of Thune. But old and new rivals stand in the way of success — not to mention the fact that no one has the faintest idea what coffee actually is.\nIf Viv wants to put the blade behind her and make her plans a reality, she won't be able to go it alone.\nBut the true rewards of the uncharted path are the travelers you meet along the way. And whether drawn together by ancient magic, flaky pastry, or a freshly brewed cup, they may become partners, family, and something deeper than she ever could have dreamed."
+    },
+    {
+      "Pony": "Rainbow Dash",
+      "Cutiemark": "sports",
+      "": "",
+      "Book": "Carrie Soto Is Back",
+      "Author": "Taylor Jenkins Reid",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1649848581i/60435878.jpg",
+      "Description": "Carrie Soto is fierce, and her determination to win at any cost has not made her popular.\nBy the time Carrie retires from tennis, she is the best player the world has ever seen. She has shattered every record and claimed twenty Slam titles. And if you ask her, she is entitled to every one. She sacrificed nearly everything to become the best, with her father as her coach.\nBut six years after her retirement, Carrie finds herself sitting in the stands of the 1994 US Open, watching her record be taken from her by a brutal, stunning, British player named Nicki Chan.\nAt thirty-seven years old, Carrie makes the monumental decision to come out of retirement and be coached by her father for one last year in an attempt to reclaim her record. Even if the sports media says that they never liked the 'Battle-Axe' anyway. Even if her body doesn't move as fast as it did. And even if it means swallowing her pride to train with a man she once almost opened her heart to: Bowe Huntley. Like her, he has something to prove before he gives up the game forever.\nIn spite of it all: Carrie Soto is back, for one epic final season. In this riveting and unforgettable novel, Taylor Jenkins Reid tells a story about the cost of greatness and a legendary athlete attempting a comeback."
+    },
+    {
+      "Pony": "Rainbow Dash",
+      "Cutiemark": "science",
+      "": "",
+      "Book": "The Long Way to a Small, Angry Planet",
+      "Author": "Becky Chambers",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1626027352i/26042767.jpg",
+      "Description": "Rosemary Harper doesn’t expect much when she joins the crew of the aging Wayfarer. While the patched-up ship has seen better days, it offers her a bed, a chance to explore the far-off corners of the galaxy, and most importantly, some distance from her past. An introspective young woman who learned early to keep to herself, she’s never met anyone remotely like the ship’s diverse crew, including Sissix, the exotic reptilian pilot, chatty engineers Kizzy and Jenks who keep the ship running, and Ashby, their noble captain.\nLife aboard the Wayfarer is chaotic and crazy—exactly what Rosemary wants. It’s also about to get extremely dangerous when the crew is offered the job of a lifetime. Tunneling wormholes through space to a distant planet is definitely lucrative and will keep them comfortable for years. But risking her life wasn’t part of the plan. In the far reaches of deep space, the tiny Wayfarer crew will confront a host of unexpected mishaps and thrilling adventures that force them to depend on each other. To survive, Rosemary’s got to learn how to rely on this assortment of oddballs—an experience that teaches her about love and trust, and that having a family isn’t necessarily the worst thing in the universe."
+    },
+    {
+      "Pony": "Rainbow Dash",
+      "Cutiemark": "music",
+      "": "",
+      "Book": "Seraphina",
+      "Author": "Rachel Hartman",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1387577872i/19549841.jpg",
+      "Description": "Four decades of peace have done little to ease the mistrust between humans and dragons in the kingdom of Goredd. Folding themselves into human shape, dragons attend court as ambassadors, and lend their rational, mathematical minds to universities as scholars and teachers. As the treaty's anniversary draws near, however, tensions are high.\nSeraphina Dombegh has reason to fear both sides. An unusually gifted musician, she joins the court just as a member of the royal family is murdered—in suspiciously draconian fashion. Seraphina is drawn into the investigation, partnering with the captain of the Queen's Guard, the dangerously perceptive Prince Lucian Kiggs. While they begin to uncover hints of a sinister plot to destroy the peace, Seraphina struggles to protect her own secret, the secret behind her musical gift, one so terrible that its discovery could mean her very life."
+    },
+    {
+      "Pony": "Applejack",
+      "Cutiemark": "art",
+      "": "",
+      "Book": "Little Women",
+      "Author": "Louisa May Alcott",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1562690475i/1934.jpg",
+      "Description": "Meg, Jo, Amy, and Beth--four \"\"little women\"\" enduring hardships and enjoying adventures in Civil War New England\nThe charming story of the March sisters, Little Women has been adored for generations. Readers have rooted for Laurie in his pursuit of Jo's hand and dreamed of traveling through Europe with old Aunt March and Amy. Aspiring writers have found inspiration in Jo's devotion to her writing. In this simple, enthralling tale, Louisa May Alcott has created four of American literature's most beloved women."
+    },
+    {
+      "Pony": "Applejack",
+      "Cutiemark": "books",
+      "": "",
+      "Book": "The wee freemen",
+      "Author": "Terry Pratchett",
+      "Link": "https://m.media-amazon.com/images/I/91YtfMMOtVL.jpg",
+      "Description": "\"\"Another world is colliding with this one,\"\" said the toad. \"\"All the monsters are coming back.\""
+    },
+    {
+      "Pony": "\"Why?\"\" said Tiffany.\n\"\"There's no one to stop them.\"",
+      "Cutiemark": "",
+      "": "",
+      "Book": "",
+      "Author": "",
+      "Link": "",
+      "Description": ""
+    },
+    {
+      "Pony": "There was silence for a moment.",
+      "Cutiemark": "",
+      "": "",
+      "Book": "",
+      "Author": "",
+      "Link": "",
+      "Description": ""
+    },
+    {
+      "Pony": "Then Tiffany said, \"\"There's me.\"\"",
+      "Cutiemark": "",
+      "": "",
+      "Book": "",
+      "Author": "",
+      "Link": "",
+      "Description": ""
+    },
+    {
+      "Pony": "Armed only with a frying pan and her common sense, Tiffany Aching, a young witch-to-be, is all that stands between the monsters of Fairyland and the warm, green Chalk country that is her home. Forced into Fairyland to seek her kidnapped brother, Tiffany allies herself with the Chalk's local Nac Mac Feegle - aka the Wee Free Men - a clan of sheep-stealing, sword-wielding, six-inch-high blue men who are as fierce as they are funny. Together they battle through an eerie and ever-shifting landscape, fighting brutal flying fairies, dream-spinning dromes, and grimhounds - black dogs with eyes of fire and teeth of razors - before ultimately confronting the Queen of the Elves, absolute ruler of a world in which reality intertwines with nightmare. And in the final showdown, Tiffany must face her cruel power alone...",
+      "Cutiemark": "",
+      "": "",
+      "Book": "",
+      "Author": "",
+      "Link": "",
+      "Description": ""
+    },
+    {
+      "Pony": "",
+      "Cutiemark": "",
+      "": "",
+      "Book": "",
+      "Author": "",
+      "Link": "",
+      "Description": ""
+    },
+    {
+      "Pony": "Applejack",
+      "Cutiemark": "animal",
+      "": "",
+      "Book": "The Vampire in the Potting Shed",
+      "Author": "Hailey Edwards",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1748043551i/234854169.jpg",
+      "Description": "There are two things Ana Sartori knows for certain. She can’t shapeshift into a wolf like her father or his pack. And, despite her being a latent, little more than human, he loves her despite her faults. She’s never going to be an alpha like him, but she can still hold her own in a fight. Not that her life is violent. He makes sure of that. Aside from occasionally wrestling pets into a headlock when it’s time to trim their nails at Gwinnett Street Groomers, Ana leads a simple life.\nAt least that was the case until someone broke into her pet resort and spa, leaving a mystery dog behind in one of the bougie boarding suites. Not to mention there’s a vampire hiding in the potting shed. A very tall, very handsome vampire. He even smells nice, minus the blood drenching his clothes.\nAna could handle those things, probably, but now there’s a new alpha determined to claim the town—and Ana—as his territory. Either she stands and fights for her home, or she runs to her father with her (metaphorical) tail tucked between her legs. Life is a lot of things, but for Ana, simple isn’t one of them anymore."
+    },
+    {
+      "Pony": "Applejack",
+      "Cutiemark": "food",
+      "": "",
+      "Book": "The Secret of Orange Blossom Cake",
+      "Author": "Rachel Linden",
+      "Link": "https://m.media-amazon.com/images/I/81AixuHmFkL._AC_UF1000,1000_QL80_.jpg",
+      "Description": "Rising star Jules Costa loves re-creating vintage recipes for her popular online cooking show. But when personal and professional disaster strikes, her only chance of saving her career is to complete her new cookbook before the end of the summer. Panicked, Jules returns to her family’s beloved olive farm on the shores of Italy’s stunning Lake Garda. Seeking culinary inspiration, she's hoping to convince her spunky eighty-year-old Nonna Bruna to share her precious collection of family recipes.\nJules’ plans quickly go awry as she discovers Nonna’s cookbook has magical and unpredictable powers. It only reveals one recipe at a time, offering a cooking experience guaranteed to satisfy the chef’s palate and bring clarity to their life. Yet it remains stubbornly blank for Jules. To make matters worse, the olive farm is in deep financial trouble, and Jules soon uncovers a web of family secrets involving the cookbook and a lost recipe for orange blossom cake that holds the key to everything. And Nicolo, the boy next door who broke her young heart, is now all grown up, even more attractive, and the only person poised to help her find answers.\nIn a whirlwind summer beyond her imagination, Jules begins to unravel the mysteries baked into her family’s history and discovers the essential ingredients to create the future of her dreams."
+    },
+    {
+      "Pony": "Applejack",
+      "Cutiemark": "sports",
+      "": "",
+      "Book": "Percy Jackson and the lightning thief",
+      "Author": "Rick Riordan",
+      "Link": "https://typebooks.ca/cdn/shop/files/BNCImageAPI_4d14558f-d4ab-4e08-bbb1-f434143e85be.jpg?v=1697707246&width=1080",
+      "Description": "Lately, mythological monsters and the Olympian gods seem to be walking straight out of the pages of Percy Jackson’s Greek mythology textbook and into his life. Zeus's master lightning bolt has been stolen, and Percy is the prime suspect. Percy and his friends have just ten days to find and return Zeus's stolen property and bring peace to a warring Mount Olympus. "
+    },
+    {
+      "Pony": "Applejack",
+      "Cutiemark": "science",
+      "": "",
+      "Book": "Leviathan",
+      "Author": "Scott Westerfeld",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1341522225i/7921082.jpg",
+      "Description": "Prince Aleksander, would-be heir to the Austro-Hungarian throne, is on the run. His own people have turned on him. His title is worthless. All he has is a battletorn war machine and a loyal crew of men.\nDeryn Sharp is a commoner, disguised as a boy in the British Air Service. She's a brilliant airman. But her secret is in constant danger of being discovered.\nWith World War I brewing, Alek and Deryn's paths cross in the most unexpected way…taking them on a fantastical, around-the-world adventure that will change both their lives forever."
+    },
+    {
+      "Pony": "Applejack",
+      "Cutiemark": "music",
+      "": "",
+      "Book": "Daisy Jones & The Six",
+      "Author": "Taylor Jenkins Reid",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1580255154i/40597810.jpg",
+      "Description": "Everyone knows DAISY JONES & THE SIX, but nobody knows the reason behind their split at the absolute height of their popularity . . . until now.\nDaisy is a girl coming of age in L.A. in the late sixties, sneaking into clubs on the Sunset Strip, sleeping with rock stars, and dreaming of singing at the Whisky a Go Go. The sex and drugs are thrilling, but it’s the rock ’n’ roll she loves most. By the time she’s twenty, her voice is getting noticed, and she has the kind of heedless beauty that makes people do crazy things.\nAlso getting noticed is The Six, a band led by the brooding Billy Dunne. On the eve of their first tour, his girlfriend Camila finds out she’s pregnant, and with the pressure of impending fatherhood and fame, Billy goes a little wild on the road.\nDaisy and Billy cross paths when a producer realizes that the key to supercharged success is to put the two together. What happens next will become the stuff of legend.\n"
+    }
+  ]
+};
+    var generallength = generaljson.pony.length;
+    var answers = [];
+
+    //document.querySelector('.Answers').innerHTML = answers[0] + ',<br>' + answers[1] + ',<br>' + answers[2] + '<br><br>=<br><br>';
+    
+    document.querySelectorAll('.answer').forEach(function(element){
+        
+        element.addEventListener('click', function(){
+        
+            let elementclass = element.dataset.number;
+            
+            if(elementclass == '1'){
+                
+                document.querySelectorAll('.answer1').forEach(function(element){
+                    
+                
+                    element.children[1].classList.remove('selected');
+                    
+                });
+                
+                answers[0] = element.dataset.answer;
+                
+            }else if(elementclass == '2'){
+                
+                document.querySelectorAll('.answer2').forEach(function(element){
+                    
+                  
+                  element.children[1].classList.remove('selected');
+                    
+                });
+                
+                answers[1] = element.dataset.answer;
+                
+            };
+            
+            element.children[1].classList.add('selected');
+        
+          if(answers.length == 2){
+          document.querySelector('.send-button').style.pointerEvents = 'all';
+          document.querySelector('.send-button').style.opacity = 1;
+          }
+          
+        })
+        
+    });
+  
+    document.querySelector('.send-button').addEventListener('click', function(){
+      
+      document.querySelectorAll('.questionblock').forEach(function(element){
+        
+        element.style.display = 'none';
+        
+      })
+      
+      for(var i=0; i<generallength; i++){
+
+              if(generaljson.pony[i].Pony == answers[0] && generaljson.pony[i].Cutiemark == answers[1]){
+                  
+                    let book = generaljson.pony[i].Book;
+                    let author = generaljson.pony[i].Author;
+                    let description = generaljson.pony[i].Description;
+                    let photo = generaljson.pony[i].Link;
+
+                    console.log('yes');
+                    document.querySelector('.booktitle').innerHTML = book;
+                    document.querySelector('.bookauthor').innerHTML = 'by ' + author;
+                    document.querySelector('.bookdescription').innerHTML = description;
+                    document.querySelector('.Book img').src = photo;
+              
+                }
+
+            }
+      
+      document.querySelector('.send-button').style.display = 'none';
+      
+    })
+    
+    
+</script>
