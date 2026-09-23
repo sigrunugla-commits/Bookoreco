@@ -1,272 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
+  
 <head>
-<meta charset="UTF-8" />
-<title>General interests book quiz</title>
-<style>
   
-  h1 {
-  display: flex;
-  flex-direction: column; 
-  align-items: center;
-  color: #718355;
-  font-family: "Bodoni MT";
-  font-size: 40pt;
-  font-weight: 100;  
-} 
-    
-  h2 {
-  display: flex;
-    flex-direction: column; 
-    align-items: right;
-    color: #718355;
-    font-family: "Bodoni MT";
-    font-weight: 100;
-    font-size: 25pt;
-    margin-left: 40px;
-    line-height: 0.5;
-
-    text-align: center;
-}
-  h3 {
-  display: flex;
-  flex-direction: column; 
-  align-items: right;
-  color: #718355;
-  font-family: "Bodoni MT";
-  font-weight: 100;
-  font-size: 20pt;
-  margin-left: 40px;
-  line-height: 0.5;
-}
-
- body {
-    background-color: #e9f5db;
-    margin: 0;
-    height: 100vh;
-  }
+  <meta charset="UTF-8" />
+  <title>General interests book quiz</title>
+  <link href="quizz.css" rel="stylesheet">
   
-  .back-button {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    padding: 8px 12px;
-    background-color: #718355;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-          color:#e9f5db;
-    }
-   .list-button {
-    position: absolute;
-    top: 6px;
-    right: 10px;
-    padding: 8px 12px;
-    background-color: #718355;
-       color:#e9f5db;
-
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .genres{
- display: flex;
-  flex-wrap: wrap;
-  gap: 10px; 
-  }
-  .send-button{
-    
-    
-    margin-top: 70px;
-    padding: 8px 12px;
-    background-color: #718355;
-    color:#e9f5db;
-    margin-left: 50%;
-    border: none;
-    transform: translate(-50%,0);
-    border-radius: 4px;
-    cursor: pointer;
-    pointer-events: none;
-    opacity: 0.5;
-    
-  }
-  
-  .selected{
-    
-    color: #718355;
-    text-decoration: underline;
-    
-  }
-  
-  .unselected{
-    
-    color: ;
-    text-decoration: none;
-  }
-  
-  .poster{
-    
-      position: relative;
-    float: left;
-
-    width: calc(100%/3);
-
-    padding: 5px;
-
-    display:flex;
-    flex-direction: column; 
-    align-items: center;
-
-    color: #718355;
-    font-family: "Bodoni MT";
-    font-weight: 100;
-    font-size: 20pt;
-    line-height: 0.5;
-    
-  }
-  
- .Book img{ 
-   display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .bookdescription{ 
-    margin-top: 50px;
-    display: block;
-    margin-left: 400px;
-    margin-right: 400px;
-    font-size: 17pt;
-    text-align: justify;
-    line-height: 1.5;
-    font-family: bodoni mt;
-    color: #718355
-    }
-    
-  .booktitle{
-    margin-top: 50px;
-    display: block;
-    margin-left: 400px;
-    margin-right: 400px;
-    font-size: 17pt;
-    text-align: justify;
-    line-height: 1.5;
-    font-family: bodoni mt;
-    color: #718355
-    
-  }
-    .bookauthor{
-    display: block;
-    margin-left: 400px;
-    margin-right: 400px;
-    font-size: 25pt;
-    text-align: center;
-    line-height: 1.5;
-    font-family: bodoni mt;
-    color: #718355
-    
-  }
-  
-   .posters {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px; 
-  }
-
-  .poster {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: calc(25% - 15px);
-  }
-  .movienaswer{
-   margin-top: 8px;
-  text-align-last: center;
-    font-weight: bold;
-  margin-left: 0;
-color: #718355
-  
- }
-  
-
-  }
-</style>
 </head>
+  
 <body>
   
   <h1>GENERAL</h1><br><br><br>
   <div class="questionblock">
+    
+    <div class="question">
     <h2 style="color:#97A97C;"> Question 1</h2>
     <h2>What is your favorite season?</h2>
-    <h3 class="answer answer1" data-number="1" data-answer="Spring">Spring </h3>
-            <img src="photos/spring.PNG"  height="140" >
+    </div>
+    
+    <div class="answers">
+      
+      <div class="answer answer1 four" data-number="1" data-answer="Spring">
+        <img src="photos/spring.PNG">
+        <div class="value">Spring</div> 
+      </div>
+              
 
-    <h3 class="answer answer1" data-number="1" data-answer="Summer">Summer </h3>
-            <img src="photos/summer.PNG"  height="140" >
+      <div class="answer answer1 four" data-number="1" data-answer="Summer">
+        <img src="photos/summer.PNG">
+        <div class="value">Summer</div>
+      </div>
+              
 
-    <h3 class="answer answer1" data-number="1" data-answer="Autumn">Autumn </h3>
-            <img src="photos/autumn.PNG"  height="140" >
+      <div class="answer answer1 four" data-number="1" data-answer="Autumn">
+        <img src="photos/autumn.PNG">
+        <div class="value">Autumn</div>
+      </div>
+              
 
-    <h3 class="answer answer1" data-number="1" data-answer="Winter">Winter </h3>
-            <img src="photos/winter.PNG"  height="140" >
-
+      <div class="answer answer1 four" data-number="1" data-answer="Winter">
+        <img src="photos/winter.PNG">
+        <div class="value">Winter</div>
+      </div>
+    </div>
   </div>
-  
-  <br><br><br><br><br><br><br><br><br><br><br><br>
   
   <div class="questionblock">
-    <h2 style="color:#97A97C;"> Question 2</h2>
-    <h2>What is your favorite genre?</h2>
-      <div class="genres">
-    <h3 class="answer answer2 " data-number="2" data-answer="horror/thriller">Horror/thriller </h3>
-    <h3 class="answer answer2" data-number="2" data-answer="fantasy/sci-fi">Fantasy/sci-fi </h3>
-    <h3 class="answer answer2" data-number="2" data-answer="Romance">Romance </h3>
-    <h3 class="answer answer2" data-number="2" data-answer="non-fiction">Non-Fiction </h3>
-    <h3 class="answer answer2" data-number="2" data-answer="Comedy">Comedy </h3>
-    <h3 class="answer answer2" data-number="2" data-answer="literary/historical">Literary/Historical </h3>
-  </div>
+    
+    <div class="question">
+      <h2 style="color:#97A97C;"> Question 2</h2>
+      <h2>What is your favorite genre?</h2>
+    </div>
+    
+    <div class="answers">
+      <div class="answer answer2 " data-number="2" data-answer="horror/thriller">
+        <img src="">
+        <div class="value">Horror/thriller</div> 
+      </div>
+      
+      <div class="answer answer2" data-number="2" data-answer="fantasy/sci-fi">
+        <img src="">
+        <div class="value">Fantasy/sci-fi</div> 
+      </div>
 
-  <br><br><br><br><br><br>
+      <div class="answer answer2" data-number="2" data-answer="Romance">
+        <img src="">
+        <div class="value">Romance</div> 
+      </div>
+      
+      <div class="answer answer2" data-number="2" data-answer="non-fiction">
+        <img src="">
+        <div class="value">Non-Fiction </div>
+      </div>
+      
+      <div class="answer answer2" data-number="2" data-answer="Comedy">
+        <img src="">
+        <div class="value">Comedy</div>
+      </div>
+      
+      <div class="answer answer2" data-number="2" data-answer="literary/historical">
+        <img src="">
+        <div class="value">Literary/Historical</div>
+      </div>
+      
+    </div>
   
-
 <div class="questionblock">
-  <h2 style="color:#97A97C;"> Question 3</h2>
-  <h2>Which of these is your favorite movie?</h2>
   
-  <div class="posters">
-    <div class="poster">
-            <img src="movies/spiritedaway.jpg" height="140" >
-      <h3 class="answer answer3 movieanswer" data-number="3" data-answer="spirited away">Spirited away</h3>
+  <div class="question">
+    <h2 style="color:#97A97C;"> Question 3</h2>
+    <h2>Which of these is your favorite movie?</h2>
+  </div>
+  
+  <div class="answers">
+    <div class="answer answer3 four" data-number="3" data-answer="spirited away">
+            <img src="movies/spiritedaway.jpg">
+      <div class="value">Spirited away</div>
     </div>
-    <div class="poster">
-            <img src="movies/shrek.jpg" height="140" >
-      <h3 class="answer answer3" data-number="3" data-answer="shrek">Shrek</h3>
+    
+    <div class="answer answer3 four" data-number="3" data-answer="shrek">
+            <img src="movies/shrek.jpg">
+      <div class="value">Shrek</div>
     </div>
-    <div class="poster">
-            <img src="movies/obsession.jpg" height="140" >
-      <h3 class="answer answer3" data-number="3" data-answer="obsession">Obsession</h3>
+    
+    <div class="answer answer3 four" data-number="3" data-answer="obsession">
+            <img src="movies/obsession.jpg">
+      <div class="value">Obsession</div>
     </div>
-    <div class="poster">
-            <img src="movies/hailmary.jpg" height="140" >
-      <h3 class="answer answer3" data-number="3" data-answer="project hail mary">Project Hail Mary</h3>
+    
+    <div class="answer answer3 four" data-number="3" data-answer="project hail mary">
+            <img src="movies/hailmary.jpg">
+      <div class="value">Project Hail Mary</div>
     </div>
-    <div class="poster">
-            <img src="movies/oppenheimer.jpg" height="140" >
-      <h3 class="answer answer3" data-number="3" data-answer="oppenheimer">Oppenheimer</h3>
+    
+    <div class="answer answer3 four" data-number="3" data-answer="oppenheimer">
+            <img src="movies/oppenheimer.jpg">
+      <div class="value">Oppenheimer</div>
     </div>
-    <div class="poster">
-            <img src="movies/mammamia.jpg" height="140" >
-      <h3 class="answer answer3" data-number="3" data-answer="mamma mia">Mamma Mia</h3>
+    
+    <div class="answer answer3 four" data-number="3" data-answer="mamma mia">
+            <img src="movies/mammamia.jpg">
+      <div class="value">Mamma Mia</div>
     </div>
-    <div class="poster">
-            <img src="movies/knivesout.jpg" height="140" >
-      <h3 class="answer answer3" data-number="3" data-answer="knives out">Knives Out</h3>
+    
+    <div class="answer answer3 four" data-number="3" data-answer="knives out">
+            <img src="movies/knivesout.jpg">
+      <div class="value">Knives Out</div>
     </div>
-    <div class="poster">
-            <img src="movies/ladybird.jpg" height="140" >
-      <h3 class="answer answer3" data-number="3" data-answer="lady bird">Lady bird</h3>
+    
+    <div class="answer answer3 four" data-number="3" data-answer="lady bird">
+            <img src="movies/ladybird.jpg">
+      <div class="value">Lady bird</div>
     </div>
+    
   </div>
 </div>
 
@@ -283,7 +150,6 @@ color: #718355
   
   <button class="send-button">CONFIRM</button>
   
-  <br><br><br><br><br><br>
   
   <button class="list-button" onclick="window.location='LISTI.html'">LIST</button>
   <button class="back-button" onclick="window.location='index.html'">BACK</button>
@@ -2191,7 +2057,7 @@ color: #718355
                 
                 document.querySelectorAll('.answer1').forEach(function(element){
                     
-                    element.classList.remove('selected');
+                    element.children[1].classList.remove('selected');
                     
                 });
                 
@@ -2201,7 +2067,7 @@ color: #718355
                 
                 document.querySelectorAll('.answer2').forEach(function(element){
                     
-                    element.classList.remove('selected');
+                    element.children[1].classList.remove('selected');
                     
                 });
                 
@@ -2211,14 +2077,14 @@ color: #718355
                 
                 document.querySelectorAll('.answer3').forEach(function(element){
                     
-                    element.classList.remove('selected');
+                    element.children[1].classList.remove('selected');
                     
                 });
                 answers[2] = element.dataset.answer;
                 
             }
             
-            element.classList.add('selected');
+            element.children[1].classList.add('selected');
           
           if(answers.length == 3){
             document.querySelector('.send-button').style.pointerEvents = 'all';
@@ -2241,14 +2107,15 @@ color: #718355
 
         if(generaljson.general[i].Season == answers[0] && generaljson.general[i].Genre == answers[1] && generaljson.general[i].Movie == answers[2]){
 
-              let book = generaljson.general[i].Book;
-              let author = generaljson.general[i].Author;
-              let description = generaljson.general[i].Description;
-              let photo = generaljson.general[i].Link;
+                    let book = generaljson.general[i].Book;
+                    let author = generaljson.general[i].Author;
+                    let description = generaljson.general[i].Description;
+                    let photo = generaljson.general[i].Link;
 
-              console.log('yes');
-              document.querySelector('.booktitle').innerHTML = book + ' by ' + author + '<br><br>' + description;
-              document.querySelector('.Book img').src = photo;
+                    document.querySelector('.booktitle').innerHTML = book;
+                    document.querySelector('.bookauthor').innerHTML = 'by ' + author;
+                    document.querySelector('.bookdescription').innerHTML = description;
+                    document.querySelector('.Book img').src = photo;
 
           }
 

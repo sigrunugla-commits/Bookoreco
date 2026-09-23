@@ -3,167 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <title>My Little Pony book quiz</title>
-<style>
-
-  *{
-
-    box-sizing: border-box;
-
-  }
-
-  body {
-    background-color: #e9f5db;
-    margin: 0;
-    height: 100vh;
-  }
-
-  h1 {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    color: #718355;
-    font-family: "Bodoni MT";
-    font-size: 40pt;
-    font-weight: 100;  
-  }
-
-  h2 {
-    display: flex;
-    flex-direction: column; 
-    align-items: right;
-    color: #718355;
-    font-family: "Bodoni MT";
-    font-weight: 100;
-    font-size: 25pt;
-    margin-left: 40px;
-    line-height: 0.5;
-
-    text-align: center;
-  }
-
-  .questionblock, .question, .answers{
-    position: relative;
-    float: left;
-    width: 100%;
-  }
-
-  .answer{
-    position: relative;
-    float: left;
-
-    width: calc(100%/3);
-
-    padding: 5px;
-
-    display:flex;
-    flex-direction: column; 
-    align-items: center;
-
-    color: #718355;
-    font-family: "Bodoni MT";
-    font-weight: 100;
-    font-size: 20pt;
-    line-height: 0.5;
-  }
-
-
-  .back-button {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    color:#e9f5db;
-    padding: 8px 12px;
-    background-color: #718355;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  .list-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    padding: 8px 12px;
-    background-color: #718355;
-    color:#e9f5db;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .send-button{
-    margin-top: 70px;
-    padding: 8px 12px;
-    background-color: #718355;
-    color:#e9f5db;
-    margin-left: 50%;
-    border: none;
-    transform: translate(-50%,0);
-    border-radius: 4px;
-    cursor: pointer;
-    pointer-events: none;
-    opacity: 0.5;
-    
-  }
-  
-  .Book img{ 
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  
-  }
-  
-  .bookdescription{ 
-    margin-top: 50px;
-    display: block;
-    margin-left: 400px;
-    margin-right: 400px;
-    font-size: 17pt;
-    text-align: justify;
-    line-height: 1.5;
-    font-family: bodoni mt;
-    color: #718355
-    }
-    
-  .booktitle{
-    margin-top: 50px;
-    display: block;
-    margin-left: 400px;
-    margin-right: 400px;
-    font-size: 25pt;
-    text-align: center;
-    line-height: 1.5;
-    font-family: bodoni mt;
-    color: #718355
-    
-  }
-    .bookauthor{
-    display: block;
-    margin-left: 400px;
-    margin-right: 400px;
-    font-size: 25pt;
-    text-align: center;
-    line-height: 1.5;
-    font-family: bodoni mt;
-    color: #718355
-    
-  }
-  
-  .selected{
-    
-    color: #718355;
-    text-decoration: underline;
-    
-  }
-  
-  .unselected{
-    
-    color: ;
-    text-decoration: none;
-  }
-  
-  
-  
-</style>
+<link href="quizz.css" rel="stylesheet">
 
 </head>
 <body>
@@ -184,7 +24,7 @@
   <div class="answers">
     
     <div class="answer answer1" id="twilight" data-answer="Twilight" data-number="1">
-        <img src="photos/twilight.png"  height="140" >
+        <img src="photos/twilight.png"  >
 
       <div class="value">Twilight</div>
 
@@ -192,34 +32,34 @@
     
     <div class="answer answer1" id="rarity" data-answer="Rarity" data-number="1">
       
-        <img src="photos/rarity.png"  height="140">
+        <img src="photos/rarity.png">
       <div class="value">Rarity</div>
     
     </div>
     <div class="answer answer1" id="fluttershy" data-answer="Fluttershy" data-number="1">
-        <img src="photos/fluttershy.png" height="140">
+        <img src="photos/fluttershy.png">
       <div class="value">Fluttershy</div>
     </div>
     
     <div class="answer answer1" id="pinkie" data-answer="Pinkie Pie" data-number="1">
-        <img src="photos/pinkie.png" height="140">
+        <img src="photos/pinkie.png" >
       <div class="value">Pinkie Pie</div>
     </div>
     
     <div class="answer answer1" id="rainbow" data-answer="Rainbow Dash" data-number="1">
-        <img src="photos/rainbow.png" height="140">
+        <img src="photos/rainbow.png" >
       <div class="value">Rainbow Dash</div>
     </div>
     
     <div class="answer answer1" id="AJ" data-answer="Applejack" data-number="1">
-        <img src="photos/apple.png" height="140">
+        <img src="photos/apple.png" >
       <div class="value">Applejack</div>
     </div>
     
   </div>
   
 </div>
-  <div class="questionblock">
+<div class="questionblock">
   <div class="question">
     <h2 style="color:#718355;margin-top: 164px"> Question 2</h2>
     <h2>What kind of Cutiemark would you have?</h2>
@@ -227,37 +67,37 @@
   
   <div class="answers">
     <div class="answer answer2" id="art" data-answer="art" data-number="2">
-            <img src="photos/artcutie.PNG" height="140">
+            <img src="photos/artcutie.PNG" >
       <div class="value">Art</div>
     </div>
     
     <div class="answer answer2" id="book" data-answer="books" data-number="2">
-      <img src="photos/bookcutie.PNG" height="140">
+      <img src="photos/bookcutie.PNG" >
       <div class="value">Book</div>
     </div>
     
     <div class="answer answer2" id="animal" data-answer="animal" data-number="2">
-      <img src="photos/animalcutie.PNG" height="140">
+      <img src="photos/animalcutie.PNG" >
       <div class="value">Animal</div>
     </div>
     
     <div class="answer answer2" id="food"  data-answer="food" data-number="2">
-      <img src="photos/foodcutie.PNG" height="140">
+      <img src="photos/foodcutie.PNG" >
       <div class="value">Food</div>
     </div>
     
     <div class="answer answer2" id="science"  data-answer="science" data-number="2">
-      <img src="photos/sciencecutie.PNG" height="140">
+      <img src="photos/sciencecutie.PNG" >
       <div class="value">Science</div>
     </div>
     
     <div class="answer answer2" id="music"  data-answer="music" data-number="2">
-      <img src="photos/musiccutie%20(1).PNG" height="140">
+      <img src="photos/musiccutie%20(1).PNG" >
       <div class="value">Music</div>
     </div>
     
     <div class="answer answer2" id="sports"  data-answer="sports" data-number="2">
-      <img src="photos/sportscutie.PNG" height="140">
+      <img src="photos/sportscutie.PNG" >
       <div class="value">Sports</div>
     </div>
     
@@ -277,8 +117,6 @@
         
           
     </div>
-  
-<br><br><br><br><br><br>
   
   
 </body>
@@ -780,7 +618,6 @@
                     let description = generaljson.pony[i].Description;
                     let photo = generaljson.pony[i].Link;
 
-                    console.log('yes');
                     document.querySelector('.booktitle').innerHTML = book;
                     document.querySelector('.bookauthor').innerHTML = 'by ' + author;
                     document.querySelector('.bookdescription').innerHTML = description;
