@@ -61,6 +61,7 @@ h1 {
   }
 .button-title {
    margin-top: 8px;
+  text-align-last: center;
     font-weight: bold;
   margin-left: 0;
 color: #718355
