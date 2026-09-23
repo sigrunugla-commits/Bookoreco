@@ -121,7 +121,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-  
+    margin-top: 0;
   }
   
   .bookdescription{ 
@@ -155,7 +155,7 @@
     font-size: 25pt;
     text-align: center;
     line-height: 1.5;
-    font-family: bodoni mt;
+    font-family: "Bodoni MT";
     color: #718355
     
   }
@@ -172,3 +172,10 @@
     color: ;
     text-decoration: none;
   }
+
+.poster{
+margin-bottom: 15px;
+margin-top: 30px;
+  
+  
+}
