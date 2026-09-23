@@ -17,14 +17,16 @@
     
   h2 {
   display: flex;
-  flex-direction: column; 
-  align-items: right;
-  color: #718355;
-  font-family: "Bodoni MT";
-  font-weight: 100;
-  font-size: 25pt;
-  margin-left: 40px;
-  line-height: 0.5;
+    flex-direction: column; 
+    align-items: right;
+    color: #718355;
+    font-family: "Bodoni MT";
+    font-weight: 100;
+    font-size: 25pt;
+    margin-left: 40px;
+    line-height: 0.5;
+
+    text-align: center;
 }
   h3 {
   display: flex;
@@ -68,12 +70,21 @@
     cursor: pointer;
   }
   
+  .genres{
+ display: flex;
+  flex-wrap: wrap;
+  gap: 10px; 
+  }
   .send-button{
     
+    
+    margin-top: 70px;
     padding: 8px 12px;
     background-color: #718355;
     color:#e9f5db;
+    margin-left: 50%;
     border: none;
+    transform: translate(-50%,0);
     border-radius: 4px;
     cursor: pointer;
     pointer-events: none;
@@ -94,11 +105,31 @@
     text-decoration: none;
   }
   
-    .Book img{ 
-    display: block;
+  .poster{
+    
+      position: relative;
+    float: left;
+
+    width: calc(100%/3);
+
+    padding: 5px;
+
+    display:flex;
+    flex-direction: column; 
+    align-items: center;
+
+    color: #718355;
+    font-family: "Bodoni MT";
+    font-weight: 100;
+    font-size: 20pt;
+    line-height: 0.5;
+    
+  }
+  
+ .Book img{ 
+   display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10px;
   }
   
   .bookdescription{ 
@@ -137,8 +168,26 @@
     
   }
   
- 
+   .posters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+  }
+
+  .poster {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(25% - 15px);
+  }
+  .movienaswer{
+   margin-top: 8px;
+  text-align-last: center;
+    font-weight: bold;
+  margin-left: 0;
+color: #718355
   
+ }
   
 
   }
@@ -151,9 +200,17 @@
     <h2 style="color:#97A97C;"> Question 1</h2>
     <h2>What is your favorite season?</h2>
     <h3 class="answer answer1" data-number="1" data-answer="Spring">Spring </h3>
+            <img src="photos/spring.PNG"  height="140" >
+
     <h3 class="answer answer1" data-number="1" data-answer="Summer">Summer </h3>
+            <img src="photos/summer.PNG"  height="140" >
+
     <h3 class="answer answer1" data-number="1" data-answer="Autumn">Autumn </h3>
+            <img src="photos/autumn.PNG"  height="140" >
+
     <h3 class="answer answer1" data-number="1" data-answer="Winter">Winter </h3>
+            <img src="photos/winter.PNG"  height="140" >
+
   </div>
   
   <br><br><br><br><br><br><br><br><br><br><br><br>
@@ -161,7 +218,8 @@
   <div class="questionblock">
     <h2 style="color:#97A97C;"> Question 2</h2>
     <h2>What is your favorite genre?</h2>
-    <h3 class="answer answer2" data-number="2" data-answer="horror/thriller">Horror/thriller </h3>
+      <div class="genres">
+    <h3 class="answer answer2 " data-number="2" data-answer="horror/thriller">Horror/thriller </h3>
     <h3 class="answer answer2" data-number="2" data-answer="fantasy/sci-fi">Fantasy/sci-fi </h3>
     <h3 class="answer answer2" data-number="2" data-answer="Romance">Romance </h3>
     <h3 class="answer answer2" data-number="2" data-answer="non-fiction">Non-Fiction </h3>
@@ -171,23 +229,59 @@
 
   <br><br><br><br><br><br>
   
-   <div class="questionblock">
-    <h2 style="color:#97A97C;"> Question 3</h2>
-    <h2>Which of these is your favorite movie?</h2>
-    <h3 class="answer answer3" data-number="3" data-answer="spirited away">Spirited away</h3>
-    <h3 class="answer answer3" data-number="3" data-answer="shrek">Shrek</h3>
+
+<div class="questionblock">
+  <h2 style="color:#97A97C;"> Question 3</h2>
+  <h2>Which of these is your favorite movie?</h2>
+  
+  <div class="posters">
+    <div class="poster">
+            <img src="movies/spiritedaway.jpg" height="140" >
+      <h3 class="answer answer3 movieanswer" data-number="3" data-answer="spirited away">Spirited away</h3>
+    </div>
+    <div class="poster">
+            <img src="movies/shrek.jpg" height="140" >
+      <h3 class="answer answer3" data-number="3" data-answer="shrek">Shrek</h3>
+    </div>
+    <div class="poster">
+            <img src="movies/obsession.jpg" height="140" >
+      <h3 class="answer answer3" data-number="3" data-answer="obsession">Obsession</h3>
+    </div>
+    <div class="poster">
+            <img src="movies/hailmary.jpg" height="140" >
+      <h3 class="answer answer3" data-number="3" data-answer="project hail mary">Project Hail Mary</h3>
+    </div>
+    <div class="poster">
+            <img src="movies/oppenheimer.jpg" height="140" >
+      <h3 class="answer answer3" data-number="3" data-answer="oppenheimer">Oppenheimer</h3>
+    </div>
+    <div class="poster">
+            <img src="movies/mammamia.jpg" height="140" >
+      <h3 class="answer answer3" data-number="3" data-answer="mamma mia">Mamma Mia</h3>
+    </div>
+    <div class="poster">
+            <img src="movies/knivesout.jpg" height="140" >
+      <h3 class="answer answer3" data-number="3" data-answer="knives out">Knives Out</h3>
+    </div>
+    <div class="poster">
+            <img src="movies/ladybird.jpg" height="140" >
+      <h3 class="answer answer3" data-number="3" data-answer="lady bird">Lady bird</h3>
+    </div>
+  </div>
+</div>
+
   </div>
   
   <div class="Book">
   
-    <img src="" style="width: 200px">
+    <img src=" " style="width: 200px">
     <div class="booktitle"></div>
     <div class="bookauthor"></div>
     <div class="bookdescription"></div>
   
   </div>
   
-  <button class="send-button">SEND</button>
+  <button class="send-button">CONFIRM</button>
   
   <br><br><br><br><br><br>
   
