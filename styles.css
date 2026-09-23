@@ -52,7 +52,20 @@ h1 {
     
   }
 
-
+  .button-icon {
+    width: 84px;
+    height: auto;
+    vertical-align: middle;
+    
+    
+  }
+.button-title {
+   margin-top: 8px;
+    font-weight: bold;
+  margin-left: 0;
+color: #718355
+  
+ }
 
 .circle {
   width: 150px;
@@ -66,8 +79,9 @@ h1 {
 }
 h2 {
   color: #718355;
-  margin-top: 400px;
-  font-size: 30pt;
+  margin-top: 1px;
+  margin-bottom: 203px;
+  font-size: 20pt;
   font-family: "Bodoni MT";
   font-weight: 100;
 }
