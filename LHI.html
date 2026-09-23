@@ -3,86 +3,566 @@
 <head>
 <meta charset="UTF-8" />
 <title>LHÍ book quiz</title>
-<style>
-  h1 {
-  display: flex;
-  flex-direction: column; 
-  align-items: center;
-  color: #718355;
-  font-family: "Bodoni MT";
-  font-size: 40pt;
-  font-weight: 100;  
-}
-  
-      h2 {
-  display: flex;
-  flex-direction: column; 
-  align-items: right;
-  color: #718355;
-  font-family: "Bodoni MT";
-  font-weight: 100;
-  font-size: 25pt;
-  margin-left: 40px;
-  line-height: 0.5;
-}
-  
-        h3 {
-  display: flex;
-  flex-direction: column; 
-  align-items: right;
-  color: #718355;
-  font-family: "Bodoni MT";
-  font-weight: 100;
-  font-size: 20pt;
-  margin-left: 40px;
-  line-height: 0.5;
-}
-  
-  body {
-    background-color: #e9f5db;
-    margin: 0;
-    height: 100vh;
-  }
-  
-  .back-button {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    padding: 8px 12px;
-    background-color: #718355;
-    border: none;
-    border-radius: 4px;
-    color:#e9f5db;
-    cursor: pointer;
-  }
-  
-     .list-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    padding: 8px 12px;
-    background-color: #718355;
-    color:#e9f5db;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-
-</style>
+<link href="quizz.css" rel="stylesheet">
 </head>
+  
 <body>
-      <h1>LHÍ</h1> <br><br><br>
+  
+<nav>
+  <h1>LHÍ</h1>
   <button class="list-button" onclick="window.location='LISTI.html'">LIST</button>
   <button class="back-button" onclick="window.location='index.html'">BACK</button>
+</nav>
   
-<h2 style="color:#97A97C;"> Question 1</h2>
-<h2>What department are you in?</h2>
-<h3>Design </h3>
-<h3>Architecture </h3>
-<h3>Stage performance </h3>
-<h3>Art teaching </h3>
-<h3>Fine arts </h3>
-<h3>Music </h3>
-<h3>Filmmaking</h3>
+<div class="questionblock">
+  <div class="question">
+    <h2 style="color:#718355;margin-top: 164px"> Question 1</h2>
+    <h2>What faculty are you in?</h2>
+  </div>
+  
+  <div class="answers">
+    <div class="answer answer1" id="Design" data-answer="Design" data-number="1">
+            <img src="photos/artcutie.PNG" >
+      <div class="value">Design</div>
+    </div>
+    
+    <div class="answer answer1" id="Architecture" data-answer="Architecture" data-number="1">
+      <img src="photos/bookcutie.PNG" >
+      <div class="value">Architecture</div>
+    </div>
+    
+    <div class="answer answer1" id="StagePerformance" data-answer="Stageperformance" data-number="1">
+      <img src="photos/animalcutie.PNG" >
+      <div class="value">Stage Performance</div>
+    </div>
+    
+    <div class="answer answer1" id="ArtTeaching"  data-answer="Art teaching" data-number="1">
+      <img src="photos/foodcutie.PNG" >
+      <div class="value">Art teaching</div>
+    </div>
+    
+    <div class="answer answer1" id="FineArts"  data-answer="Fine arts" data-number="1">
+      <img src="photos/sciencecutie.PNG" >
+      <div class="value">Fine arts</div>
+    </div>
+    
+    <div class="answer answer1" id="Music"  data-answer="Music" data-number="1">
+      <img src="photos/musiccutie%20(1).PNG" >
+      <div class="value">Music</div>
+    </div>
+    
+    <div class="answer answer1" id="Filmmaking"  data-answer="Filmmaking" data-number="1">
+      <img src="photos/sportscutie.PNG" >
+      <div class="value">Filmmaking</div>
+    </div>
+    
+  </div>
+    
+</div>
+  
+<div class="questionblock" id="extraquestion">
+  <div class="question">
+    <h2 style="color:#718355;margin-top: 164px"> Question 2</h2>
+    <h2>What department are you in?</h2>
+  </div>
+  
+  <div class="answers">
+    <div class="answer answer2 Design" id="GraphicDesign" data-answer="Graphic design" data-number="2">
+            <img src="photos/artcutie.PNG" >
+      <div class="value">Graphic Design</div>
+    </div>
+    
+    <div class="answer answer2 Design" id="FashionDesign" data-answer="Fashion design" data-number="2">
+      <img src="photos/bookcutie.PNG" >
+      <div class="value">Fashion Design</div>
+    </div>
+    
+    <div class="answer answer2 Design" id="ProductDesign" data-answer="Product design" data-number="2">
+      <img src="photos/animalcutie.PNG" >
+      <div class="value">Product Design</div>
+    </div>
+    
+    <div class="answer answer2 Stageperformance" id="Playwriting"  data-answer="Playwriting" data-number="2">
+      <img src="photos/foodcutie.PNG" >
+      <div class="value">Playwriting</div>
+    </div>
+    
+    <div class="answer answer2 Stageperformance" id="Acting"  data-answer="Acting" data-number="2">
+      <img src="photos/sciencecutie.PNG" >
+      <div class="value">Acting</div>
+    </div>
+    
+    <div class="answer answer2 Stageperformance" id="ContemporaryDance"  data-answer="Contemporary dance" data-number="2">
+      <img src="photos/musiccutie%20(1).PNG" >
+      <div class="value">Contemporary Dance</div>
+    </div>
+    
+    <div class="answer answer2 Music" id="Classical"  data-answer="Classical" data-number="2">
+      <img src="photos/sportscutie.PNG" >
+      <div class="value">Classical</div>
+    </div>
+    
+    <div class="answer answer2 Music" id="Composition"  data-answer="Composition" data-number="2">
+      <img src="photos/sportscutie.PNG" >
+      <div class="value">Composition</div>
+    </div>
+    
+    <div class="answer answer2 Music" id="Contemporary"  data-answer="Contemporary" data-number="2">
+      <img src="photos/sportscutie.PNG" >
+      <div class="value">Contemporary</div>
+    </div>
+    
+  </div>
+    
+</div>
+  
+<div class="Book" id="">
+        
+        <img src="" style="width: 200px">
+        <div class="booktitle"></div>
+        <div class="bookauthor"></div>
+        <div class="bookdescription"></div>
+        
+          
+    </div>
+  
+<button class="send-button">CONFIRM</button>
+  
 </body>
 </html>
+
+<script>
+
+  
+    var unselected = '#97A97C';
+    var selected = '#718355';
+  
+    var generaljson = {
+  "lhi": [
+    {
+      "Faculty": "Design",
+      "Department": "Graphic design",
+      "": "",
+      "Book": "Logo Design ",
+      "Author": "Julius Wiedemann",
+      "Link": "https://www.rizzolibookstore.com/sites/rizzolibookstore.com/files/styles/product_main/public/timberImage/97/9783836556347.jpg?itok=EawGgn7h. ",
+      "Description": ""
+    },
+    {
+      "Faculty": "Design",
+      "Department": "Graphic design",
+      "": "",
+      "Book": "History of Graphic Design",
+      "Author": "Philip B. Megs, ",
+      "Link": "https://m.media-amazon.com/images/I/51D7AMAjN6L._AC_UF1000,1000_QL80_.jpg. ",
+      "Description": ""
+    },
+    {
+      "Faculty": "Design",
+      "Department": "Graphic design",
+      "": "",
+      "Book": " The Graphic Design Bible",
+      "Author": "heo Inglis",
+      "Link": "https://m.media-amazon.com/images/I/71ng-giA8bL._AC_UF894,1000_QL8",
+      "Description": ""
+    },
+    {
+      "Faculty": "Design",
+      "Department": "Fashion design",
+      "": "",
+      "Book": "Fashion, Perversity, and the Sixties Laid Bare",
+      "Author": "Fred Vermorel",
+      "Link": "https://www.publishersweekly.com/cover/9780879516918.  ",
+      "Description": ""
+    },
+    {
+      "Faculty": "Design",
+      "Department": "Fashion design",
+      "": "",
+      "Book": " Sustainable Fashion,",
+      "Author": "Wearme Fashion,",
+      "Link": "https://cdn.waterstones.com/bookjackets/large/9788/4174/9788417412791.jpg.",
+      "Description": ""
+    },
+    {
+      "Faculty": "Design",
+      "Department": "Fashion design",
+      "": "",
+      "Book": "Art/Fashion in the 21st Century",
+      "Author": "Michell Oakley Smith, Alison Kubler",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1367782474i/17573862.jpg",
+      "Description": ""
+    },
+    {
+      "Faculty": "Design",
+      "Department": "Product design",
+      "": "",
+      "Book": "Apple Design",
+      "Author": "Friedrich von Borries\n",
+      "Link": "https://m.media-amazon.com/images/I/31iNqHinTcL._AC_UF1000,1000_QL80_.jpg ",
+      "Description": ""
+    },
+    {
+      "Faculty": "Design",
+      "Department": "Product design",
+      "": "",
+      "Book": "Scandinavian Design",
+      "Author": "Charlotte Fiell,",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1347490474i/283915.jpg",
+      "Description": ""
+    },
+    {
+      "Faculty": "Design",
+      "Department": "Product design",
+      "": "",
+      "Book": "Eames Design",
+      "Author": "John Neuhart",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1328853109i/319492.jpg",
+      "Description": ""
+    },
+    {
+      "Faculty": "Architecture",
+      "Department": "",
+      "": "",
+      "Book": "My Life as an Architect in Tokyo",
+      "Author": "Kengo Kuma",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1624656459i/58412678.jpg  \n",
+      "Description": ""
+    },
+    {
+      "Faculty": "Architecture",
+      "Department": "",
+      "": "",
+      "Book": "Architects Pocket Book",
+      "Author": " Charlotte Baden-Powell",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1348469753i/4667492.jpg",
+      "Description": ""
+    },
+    {
+      "Faculty": "Architecture",
+      "Department": "",
+      "": "",
+      "Book": "Theory and Design in the First Machine Age",
+      "Author": " Reyner Banham",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1347370840i/199734.jpg",
+      "Description": ""
+    },
+    {
+      "Faculty": "Stageperformance",
+      "Department": "Playwriting",
+      "": "",
+      "Book": "Script Supervising and Film Continuity",
+      "Author": "Pat. P. Miller ",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1698951253i/149774068.jpg. ",
+      "Description": ""
+    },
+    {
+      "Faculty": "Stageperformance",
+      "Department": "Playwriting",
+      "": "",
+      "Book": " The Writer's Journey",
+      "Author": "Christopher Vogler",
+      "Link": "https://m.media-amazon.com/images/I/81OSCchWimL._AC_UF1000,1000_QL80_.jpg.  ",
+      "Description": ""
+    },
+    {
+      "Faculty": "Stageperformance",
+      "Department": "Playwriting",
+      "": "",
+      "Book": "Communists, Cowboys , and Queers",
+      "Author": " David Savran",
+      "Link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXd4LjmeaHQ9PXDriZVDF7QiDURnZk1IV4HoOGX0v9VrOLg1KndYjtRnE&s=10",
+      "Description": ""
+    },
+    {
+      "Faculty": "Stageperformance",
+      "Department": "Acting",
+      "": "",
+      "Book": "Some of Me ",
+      "Author": "Isabella Rossellini",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1387739403i/625317.jpg ",
+      "Description": ""
+    },
+    {
+      "Faculty": "Stageperformance",
+      "Department": "Acting",
+      "": "",
+      "Book": "Pageboy",
+      "Author": "Elliot Page",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1670327813i/60473073.jpg.",
+      "Description": ""
+    },
+    {
+      "Faculty": "Stageperformance",
+      "Department": "Acting",
+      "": "",
+      "Book": "Directing Actors",
+      "Author": "Judith Weston",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1395001839i/254807.jpg",
+      "Description": ""
+    },
+    {
+      "Faculty": "Stageperformance",
+      "Department": "Contemporary dance",
+      "": "",
+      "Book": "Dance, Consumerism and Spirituality ",
+      "Author": "C.S. Walter",
+      "Link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYHsiojJ5SwjDe3fh7XQwiHW3LGsAv1OEfE6-jsA1eIw&s.  ",
+      "Description": ""
+    },
+    {
+      "Faculty": "Stageperformance",
+      "Department": "Contemporary dance",
+      "": "",
+      "Book": "The Kabuki Theatre of Japan",
+      "Author": "A.C. Scott",
+      "Link": "https://m.media-amazon.com/images/I/81Z+HEaodVL._AC_UF350,350_QL50_.jpg.",
+      "Description": ""
+    },
+    {
+      "Faculty": "Stageperformance",
+      "Department": "Contemporary dance",
+      "": "",
+      "Book": "Decentering Dancing Texts",
+      "Author": "Janet Lansdale",
+      "Link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRtAEp7vrYZrfliP5OcqG-8tIxEFbqfEqFEtkSXp3Vpg&s",
+      "Description": ""
+    },
+    {
+      "Faculty": "Filmmaking",
+      "Department": "",
+      "": "",
+      "Book": "501 Must-See Movies  ",
+      "Author": "Polly Manguel ",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1349876659i/16078665.jpg ",
+      "Description": ""
+    },
+    {
+      "Faculty": "Filmmaking",
+      "Department": "",
+      "": "",
+      "Book": "Make Trouble",
+      "Author": "John Waters",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1492233900i/30753998.jpg.",
+      "Description": ""
+    },
+    {
+      "Faculty": "Filmmaking",
+      "Department": "",
+      "": "",
+      "Book": "Men, Women, and Chain Saws",
+      "Author": "Carol J. CLover",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1348474893i/293192.jpg",
+      "Description": ""
+    },
+    {
+      "Faculty": "Art teaching",
+      "Department": "",
+      "": "",
+      "Book": "Teaching Primary Music",
+      "Author": "Alison Daubney",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1495338637i/33939502.jpg. ",
+      "Description": ""
+    },
+    {
+      "Faculty": "Art teaching",
+      "Department": "",
+      "": "",
+      "Book": "Creative and Mental Growth 5th Edition",
+      "Author": "Viktor Lowenfeld",
+      "Link": "https://pictures.abebooks.com/isbn/9780023720802-uk.jpg",
+      "Description": ""
+    },
+    {
+      "Faculty": "Fine arts",
+      "Department": "",
+      "": "",
+      "Book": "The Painting of Modern Life  ",
+      "Author": "Vija Celmins",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1266535763i/2093445.jpg \n",
+      "Description": ""
+    },
+    {
+      "Faculty": "Fine arts",
+      "Department": "",
+      "": "",
+      "Book": "Hverra Manna Ertu?",
+      "Author": "Hulda Hákon",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1635352177i/59464488.jpg",
+      "Description": ""
+    },
+    {
+      "Faculty": "Fine arts",
+      "Department": "",
+      "": "",
+      "Book": "Everything Must Have a Name",
+      "Author": "David Shrigley",
+      "Link": "  https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk3igtnWX8sGiRGueAEq3JSZcX8t_e3BDzpydjGsSB3UCN6Eaq3KgplZsS&s=10",
+      "Description": ""
+    },
+    {
+      "Faculty": "Music",
+      "Department": "Classical",
+      "": "",
+      "Book": "Chopin,",
+      "Author": "Camille Bourniquel,",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1650459519i/3413033.jpg ",
+      "Description": ""
+    },
+    {
+      "Faculty": "Music",
+      "Department": "Composition",
+      "": "",
+      "Book": "Conceptualizing Music",
+      "Author": "Lawrence M. Zbikowski",
+      "Link": "https://m.media-amazon.com/images/I/618tQZPaE0L._AC_UF894,1000_QL80_.jpg",
+      "Description": ""
+    },
+    {
+      "Faculty": "Music",
+      "Department": "Composition",
+      "": "",
+      "Book": "Composing Under the Skin",
+      "Author": "Paul Craenen",
+      "Link": "https://lup.be/wp-content/uploads/2024/01/66265_jpg_rgb_original-wpv_240x0.jpg",
+      "Description": ""
+    },
+    {
+      "Faculty": "Music",
+      "Department": "Contemporary",
+      "": "",
+      "Book": "Musical Exoticism",
+      "Author": "Ralph P. Locke",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1348765631i/6666011.jpg.     ",
+      "Description": ""
+    },
+    {
+      "Faculty": "Music",
+      "Department": "Contemporary",
+      "": "",
+      "Book": "Tónlist er Tónlist",
+      "Author": "Arnar Eggert Thoroddsen",
+      "Link": "https://arnareggert.is/wp-content/uploads/2013/10/tonlist-er-tonlist-kapa.jpg",
+      "Description": ""
+    }
+  ]
+};
+    var generallength = generaljson.lhi.length;
+    var answers = [];
+  
+    var extra = false;
+    
+    function extraQuestion(){
+    
+    document.getElementById('extraquestion').style.display = 'none';
+    document.querySelectorAll('.answer2').forEach(function(element){
+
+    element.style.display = 'none';
+
+    });
+  }
+  
+    extraQuestion();
+  
+    document.querySelectorAll('.answer').forEach(function(element){
+        
+        element.addEventListener('click', function(){
+        
+            let elementclass = element.dataset.number;
+            
+            if(elementclass == '1'){
+                
+                extraQuestion();
+              
+                document.querySelectorAll('.answer1').forEach(function(element){
+                    
+                    element.children[1].classList.remove('selected');
+                  
+                });
+                
+                answers[0] = element.dataset.answer;
+              
+                //Checking if extra answers need to be offered
+                if(element.dataset.answer == 'Design' || element.dataset.answer == 'Stageperformance' || element.dataset.answer == 'Music' ){
+                
+                  let extraa = element.dataset.answer;
+                  
+                  document.getElementById('extraquestion').style.display = 'block';
+                  
+                  document.querySelectorAll('.'+extraa).forEach(function(element){
+    
+                    element.style.display = 'flex';
+
+                  })
+                  
+                  extra = true;
+                  
+                }else{
+                  answers.splice(1); 
+                  extra = false;
+                }
+                
+            }else if(elementclass == '2'){
+                
+                document.querySelectorAll('.answer2').forEach(function(element){
+                    
+                  
+                  element.children[1].classList.remove('selected');
+                    
+                });
+                
+                answers[1] = element.dataset.answer;
+                
+            };
+            
+            element.children[1].classList.add('selected');
+        
+          if(answers.length == 1 && document.getElementById('extraquestion').style.display == 'none' || answers.length == 2){
+          document.querySelector('.send-button').style.pointerEvents = 'all';
+          document.querySelector('.send-button').style.opacity = 1;
+          }
+          
+          console.log(answers);
+          
+          
+        })
+        
+    });
+  
+    document.querySelector('.send-button').addEventListener('click', function(){
+      
+      document.querySelectorAll('.questionblock').forEach(function(element){
+        
+        element.style.display = 'none';
+        
+      })
+      
+      for(var i=0; i<generallength; i++){
+
+              if(generaljson.lhi[i].Faculty == answers[0] && extra == false || generaljson.lhi[i].Faculty == answers[0] && generaljson.lhi[i].Department == answers[1]){
+                  
+                  document.querySelector('body').insertAdjacentHTML('beforeend', '<div class="Book" id="Book'+i+'" id="b'+i+'"><img id="Bookimg'+i+'" src="" style="width: 200px"><div class="booktitle" id="booktitle'+i+'"></div><div class="bookauthor" id="bookauthor'+i+'"></div><div class="bookdescription" id="bookdescription'+i+'"></div></div>');
+                
+                    let book = generaljson.lhi[i].Book;
+                    let author = generaljson.lhi[i].Author;
+                    let description = generaljson.lhi[i].Description;
+                    let photo = generaljson.lhi[i].Link;
+                
+                    console.log(generaljson.lhi[i].Faculty);
+                    console.log(book);
+
+                    document.getElementById('booktitle'+i).innerHTML = book;
+                    document.getElementById('bookauthor'+i).innerHTML = 'by ' + author;
+                    document.getElementById('bookdescription'+i).innerHTML = description;
+                    document.getElementById('Bookimg'+i).src = photo;
+              
+                }
+
+            }
+      
+      document.querySelector('.send-button').style.display = 'none';
+      
+    })
+    
+    
+</script>
