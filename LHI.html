@@ -116,16 +116,6 @@
     
 </div>
   
-<div class="Book" id="">
-        
-        <img src="" style="width: 200px">
-        <div class="booktitle"></div>
-        <div class="bookauthor"></div>
-        <div class="bookdescription"></div>
-        
-          
-    </div>
-  
 <button class="send-button">CONFIRM</button>
   
 </body>
@@ -541,7 +531,7 @@
 
               if(generaljson.lhi[i].Faculty == answers[0] && extra == false || generaljson.lhi[i].Faculty == answers[0] && generaljson.lhi[i].Department == answers[1]){
                   
-                  document.querySelector('body').insertAdjacentHTML('beforeend', '<div class="Book" id="Book'+i+'" id="b'+i+'"><img id="Bookimg'+i+'" src="" style="width: 200px"><div class="booktitle" id="booktitle'+i+'"></div><div class="bookauthor" id="bookauthor'+i+'"></div><div class="bookdescription" id="bookdescription'+i+'"></div></div>');
+                  document.querySelector('body').insertAdjacentHTML('beforeend', '<div class="Book" id="Book'+i+'" id="b'+i+'"><img id="Bookimg'+i+'" src="" ><div class="booktitle" id="booktitle'+i+'"></div><div class="bookauthor" id="bookauthor'+i+'"></div><div class="bookdescription" id="bookdescription'+i+'"></div></div>');
                 
                     let book = generaljson.lhi[i].Book;
                     let author = generaljson.lhi[i].Author;
