@@ -29,9 +29,7 @@
     font-family: "Bodoni MT";
     font-weight: 100;
     font-size: 25pt;
-    margin-left: 40px;
     line-height: 0.5;
-
     text-align: center;
   }
 
@@ -122,7 +120,7 @@
     margin-left: auto;
     margin-right: auto;
     width: 300px;
-    margin-top: 0;
+    margin-top: 10px;
   }
   
   .bookdescription{ 
@@ -130,10 +128,11 @@
     display: block;
     margin-left: 400px;
     margin-right: 400px;
+    margin-bottom: 200px;
     font-size: 17pt;
     text-align: justify;
     line-height: 1.5;
-    font-family: bodoni mt;
+    font-family: "Bodoni MT";
     color: #718355
     }
     
@@ -145,7 +144,7 @@
     font-size: 25pt;
     text-align: center;
     line-height: 1.5;
-    font-family: bodoni mt;
+    font-family: "Bodoni MT";
     color: #718355
     
   }
