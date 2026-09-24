@@ -155,6 +155,7 @@
   </div>
   
   <button class="send-button">CONFIRM</button>
+  
   <br><br><br><br><br><br>
   
   <button class="list-button" onclick="window.location='LISTI.html'">LIST</button>
@@ -1703,7 +1704,7 @@
       "Movie": "project hail mary",
       "Book": "The Left Hand of Darkness",
       "Author": "Ursula K. Le Guin",
-      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1632184267i/831880.jpg–",
+      "Link": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1632184267i/831880.jpg",
       "Description": "A groundbreaking work of science fiction, The Left Hand of Darkness tells the story of a lone human emissary to Winter, an alien world whose inhabitants spend most of their time without a gender. His goal is to facilitate Winter's inclusion in a growing intergalactic civilization. But to do so he must bridge the gulf between his own views and those of the completely dissimilar culture that he encounters.<br><br>Embracing the aspects of psychology, society, and human emotion on an alien world, The Left Hand of Darkness stands as a landmark achievement in the annals of intellectual science fiction."
     },
     {
@@ -2053,6 +2054,9 @@
     var generallength = generaljson.general.length;
     var answers = [];
     
+  
+  
+  
     document.querySelectorAll('.answer').forEach(function(element){
         
         element.addEventListener('click', function(){
@@ -2093,13 +2097,13 @@
             element.children[1].classList.add('selected');
           
           if(answers.length == 3){
-            document.querySelector('.send-button').style.pointerEvents = 'all';
-            document.querySelector('.send-button').style.opacity = 1;
-          };
+          document.querySelector('.send-button').style.pointerEvents = 'all';
+          document.querySelector('.send-button').style.opacity = 1;
+          }
           
         })
         
-    })
+    });
   
     document.querySelector('.send-button').addEventListener('click', function(){
       

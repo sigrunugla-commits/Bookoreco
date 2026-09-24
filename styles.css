@@ -39,6 +39,14 @@ h1 {
   gap: 72px;
 }
 
+.buttons button {
+  transition: transform 0.3s ease; 
+}
+
+.buttons button:hover {
+  transform: scale(1.1); 
+}
+
   .list-button {
   position: absolute;
   top: 20px;
