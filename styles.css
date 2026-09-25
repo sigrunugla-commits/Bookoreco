@@ -35,8 +35,10 @@ h1 {
 }
 
 .buttons {
+     margin-top: 50px;
+
   top: 250px;
-  position: absolute;
+  position: fixed;
   display: flex;
   gap: 72px;
 }
