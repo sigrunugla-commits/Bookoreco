@@ -1,4 +1,6 @@
-
+html {
+  scroll-behavior: auto;
+}
 body {
   background-color: #e9f5db;
   display: flex;
@@ -88,7 +90,7 @@ color: #718355
 }
 h2 {
   color: #718355;
-  margin-top: 1px;
+  margin-top: -20px;
   margin-bottom: 239px;
   font-size: 20pt;
   font-family: "Bodoni MT";
