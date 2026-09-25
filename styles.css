@@ -1,6 +1,15 @@
 html {
   scroll-behavior: auto;
 }
+.grain-overlay {
+  position: fixed;
+  inset: 0;
+  background: url("overlay/grain.gif") repeat;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 9999;
+}
 body {
   background-color: #e9f5db;
   display: flex;
